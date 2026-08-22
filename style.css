@@ -343,3 +343,13 @@ nav a {
         gap: 5px;
     }
 }
+
+/* Teaching page section labels */
+
+.teaching-section h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #777777;
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
