@@ -515,13 +515,14 @@ nav a {
     margin-bottom: 60px;
 }
 
-/* Pre-doctoral publications */
-
 .publications-heading {
     margin-top: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
+.publications-heading + .paper {
+    margin-top: 0;
+}
 /* Work in Progress */
 
 .wip-heading {
