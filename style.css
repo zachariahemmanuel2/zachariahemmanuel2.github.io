@@ -391,8 +391,8 @@ nav a {
 }
 
 .welcome-heading {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #777777;
-    margin-bottom: 8px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-top: 28px;
+    margin-bottom: 10px;
 }
