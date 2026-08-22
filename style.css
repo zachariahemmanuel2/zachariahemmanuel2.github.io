@@ -560,3 +560,19 @@ nav a {
 .publications-heading + .paper > h3 {
     margin-top: 3px;
 }
+
+/* Only reduce spacing after Pre-Doctoral Publications */
+
+.publications-heading {
+    margin-bottom: 0 !important;
+}
+
+.publications-heading + article.paper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.publications-heading + article.paper > h3 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
