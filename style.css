@@ -346,10 +346,14 @@ nav a {
 
 /* Teaching page section labels */
 
-.teaching-section h3 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #777777;
-    margin-top: 35px;
-    margin-bottom: 25px;
+.teaching-item h4 {
+    margin: 0 0 3px 0;
+}
+
+.teaching-item p {
+    margin: 2px 0;
+}
+
+.teaching-item {
+    margin-bottom: 14px;
 }
