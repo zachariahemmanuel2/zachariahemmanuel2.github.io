@@ -357,3 +357,9 @@ nav a {
 .teaching-item {
     margin-bottom: 14px;
 }
+
+@media (max-width: 768px) {
+    .teaching-item {
+        margin-bottom: 14px;
+    }
+}
