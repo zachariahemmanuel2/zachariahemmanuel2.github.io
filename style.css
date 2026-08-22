@@ -544,3 +544,19 @@ nav a {
 .publications-heading + .paper h3 {
     margin-top: 0;
 }
+
+/* Reduce space between Pre-Doctoral Publications
+   and the first publication only */
+
+.publications-heading {
+    margin-bottom: 0;
+}
+
+.publications-heading + .paper {
+    margin-top: 0;
+    padding-top: 1px;
+}
+
+.publications-heading + .paper > h3 {
+    margin-top: 3px;
+}
