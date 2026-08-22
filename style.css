@@ -1,155 +1,345 @@
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-   ========================= */
+/* ========================================
+   MAIN CONTAINER
+   ======================================== */
+
+.container {
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   NAVIGATION
+   ======================================== */
+
+.nav-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 18px 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+
+/* ========================================
+   HERO SECTION - DESKTOP
+   ======================================== */
+
+.hero {
+    padding: 60px 0;
+}
+
+.hero-grid {
+    display: grid;
+
+    /* Bio takes remaining space; photo gets 300px */
+    grid-template-columns: minmax(0, 1fr) 300px;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+/* BIO - LEFT SIDE */
+
+.hero-text {
+    min-width: 0;
+    order: 1;
+}
+
+.home-name {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    line-height: 1.6;
+}
+
+.hero-summary {
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   PROFILE - RIGHT SIDE
+   ======================================== */
+
+.profile-card {
+    order: 2;
+
+    width: 100%;
+    max-width: 300px;
+
+    justify-self: end;
+
+    overflow: hidden;
+}
+
+
+/* PROFILE PHOTO */
+
+.profile-photo {
+    display: block;
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    /* Keeps the upper part of the portrait visible */
+    object-position: center top;
+}
+
+
+/* PROFILE DETAILS */
+
+.profile-details {
+    padding: 16px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.profile-details strong {
+    font-size: 1.05rem;
+}
+
+.profile-details span {
+    font-size: 0.9rem;
+}
+
+.profile-details a {
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   RESEARCH INTERESTS
+   ======================================== */
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.interests span {
+    padding: 7px 11px;
+}
+
+
+/* ========================================
+   SOCIAL LINKS
+   ======================================== */
+
+.social-links {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 10px;
+}
+
+.social-links a {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
 
 @media (max-width: 768px) {
 
-    /* Main page width */
     .container {
-        width: min(calc(100% - 28px), 1080px);
+        width: calc(100% - 30px);
     }
 
-    /* Navigation */
+
+    /* NAVIGATION */
+
     .nav-wrap {
         justify-content: center;
-        padding: 12px 0;
+        padding: 14px 0;
     }
 
     nav {
+        width: 100%;
+
         display: flex;
         flex-wrap: wrap;
+
         justify-content: center;
-        gap: 12px 18px;
+
+        gap: 10px 16px;
     }
 
     nav a {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
 
-    /* HERO: change to one column */
+    /* HERO */
+
     .hero {
         padding: 30px 0 45px;
     }
 
     .hero-grid {
         display: flex;
+
+        /* Everything stacks vertically */
         flex-direction: column;
-        gap: 25px;
+
+        gap: 30px;
+
         align-items: center;
     }
 
 
-    /* PROFILE PHOTO COMES FIRST */
+    /* --------------------------------
+       PHOTO FIRST ON MOBILE
+       -------------------------------- */
 
     .profile-card {
         order: 1;
+
         width: 100%;
         max-width: 280px;
+
         margin: 0 auto;
+
+        justify-self: auto;
     }
 
-    .profile-card img {
+    .profile-photo {
         width: 100%;
+
         height: 320px;
+
         object-fit: cover;
+
         object-position: center top;
-        display: block;
     }
 
     .profile-details {
-        padding: 14px;
         text-align: center;
+        align-items: center;
+
+        padding: 14px 5px;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 
 
-    /* BIOGRAPHY COMES AFTER PHOTO */
+    /* --------------------------------
+       BIO SECOND ON MOBILE
+       -------------------------------- */
 
     .hero-text {
         order: 2;
+
         width: 100%;
     }
 
-
-    /* Name */
     .home-name {
         font-size: 2.2rem;
         line-height: 1.15;
-        margin-bottom: 14px;
     }
 
-
-    /* Applied Microeconomist */
     .eyebrow {
         font-size: 0.75rem;
     }
 
-
-    /* University information */
     .hero-subtitle {
         font-size: 1rem;
         line-height: 1.55;
     }
 
-
-    /* Biography */
     .hero-summary,
     .hero-text p {
-        font-size: 1rem;
         line-height: 1.65;
     }
 
 
-    /* Buttons */
+    /* BUTTONS */
+
     .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 22px;
+
+        gap: 9px;
+
+        margin-top: 20px;
     }
 
     .button {
-        padding: 10px 14px;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
 
-    /* Research interests */
+    /* INTERESTS */
+
     .interests {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
         margin-top: 18px;
+
+        gap: 7px;
     }
 
     .interests span {
-        font-size: 0.78rem;
-        padding: 6px 10px;
+        font-size: 0.8rem;
     }
 
 
-    /* Footer */
+    /* FOOTER */
+
     .footer-wrap {
+        display: flex;
         flex-direction: column;
+
         align-items: center;
+
         text-align: center;
-        gap: 6px;
+
+        gap: 5px;
     }
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 15px;
-    align-items: center;
-}
-
-.social-links a {
-    font-size: 1.4rem;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-}
-
-.social-links a:hover {
-    transform: translateY(-2px);
 }
