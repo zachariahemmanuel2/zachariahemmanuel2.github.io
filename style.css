@@ -16,13 +16,13 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 18px 0;
+    padding: 14px 0;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 22px;
 }
 
 nav a {
@@ -35,22 +35,24 @@ nav a {
    ======================================== */
 
 .hero {
-    padding: 60px 0;
+    padding: 30px 0 35px;
 }
 
 .hero-grid {
     display: grid;
 
-    /* Bio takes remaining space; photo gets 300px */
-    grid-template-columns: minmax(0, 1fr) 300px;
+    /* Bio on left, profile photo on right */
+    grid-template-columns: minmax(0, 1fr) 275px;
 
-    gap: 60px;
+    gap: 45px;
 
     align-items: start;
 }
 
 
-/* BIO - LEFT SIDE */
+/* ========================================
+   BIO - LEFT SIDE
+   ======================================== */
 
 .hero-text {
     min-width: 0;
@@ -58,18 +60,42 @@ nav a {
 }
 
 .home-name {
-    font-size: 2.8rem;
-    line-height: 1.15;
-    margin-top: 8px;
-    margin-bottom: 15px;
+    font-size: 2.45rem;
+    line-height: 1.1;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.eyebrow {
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 
 .hero-subtitle {
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.45;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.welcome-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 15px;
+    margin-bottom: 6px;
 }
 
 .hero-summary {
-    line-height: 1.7;
+    line-height: 1.55;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.hero-text > p:not(.eyebrow):not(.hero-subtitle):not(.hero-summary) {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    line-height: 1.55;
 }
 
 
@@ -81,7 +107,7 @@ nav a {
     order: 2;
 
     width: 100%;
-    max-width: 300px;
+    max-width: 275px;
 
     justify-self: end;
 
@@ -91,16 +117,16 @@ nav a {
 
 /* PROFILE PHOTO */
 
-.profile-photo {
+.profile-photo,
+.profile-card img {
     display: block;
 
     width: 100%;
-
-    height: 350px;
+    height: 305px;
 
     object-fit: cover;
 
-    /* Keeps the upper part of the portrait visible */
+    /* Keeps face toward upper part of portrait */
     object-position: center top;
 }
 
@@ -108,22 +134,24 @@ nav a {
 /* PROFILE DETAILS */
 
 .profile-details {
-    padding: 16px 5px;
+    padding: 10px 3px;
+
     display: flex;
     flex-direction: column;
-    gap: 5px;
+
+    gap: 3px;
 }
 
 .profile-details strong {
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 
 .profile-details span {
-    font-size: 0.9rem;
+    font-size: 0.86rem;
 }
 
 .profile-details a {
-    font-size: 0.9rem;
+    font-size: 0.86rem;
 }
 
 
@@ -134,13 +162,19 @@ nav a {
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
 
-    margin-top: 25px;
+    gap: 8px;
+
+    margin-top: 14px;
 }
 
 .button {
     display: inline-block;
+
+    padding: 8px 12px;
+
+    font-size: 0.85rem;
+
     text-decoration: none;
 }
 
@@ -153,13 +187,15 @@ nav a {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 6px;
 
-    margin-top: 20px;
+    margin-top: 11px;
 }
 
 .interests span {
-    padding: 7px 11px;
+    padding: 5px 9px;
+
+    font-size: 0.76rem;
 }
 
 
@@ -171,13 +207,14 @@ nav a {
     display: flex;
     align-items: center;
 
-    gap: 14px;
+    gap: 12px;
 
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
 .social-links a {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+
     text-decoration: none;
 }
 
@@ -189,7 +226,7 @@ nav a {
 @media (max-width: 768px) {
 
     .container {
-        width: calc(100% - 30px);
+        width: calc(100% - 28px);
     }
 
 
@@ -197,7 +234,8 @@ nav a {
 
     .nav-wrap {
         justify-content: center;
-        padding: 14px 0;
+
+        padding: 11px 0;
     }
 
     nav {
@@ -208,66 +246,80 @@ nav a {
 
         justify-content: center;
 
-        gap: 10px 16px;
+        gap: 9px 15px;
     }
 
     nav a {
-        font-size: 0.9rem;
+        font-size: 0.88rem;
     }
 
 
-    /* HERO */
+    /* ====================================
+       HERO - MOBILE
+       ==================================== */
 
     .hero {
-        padding: 30px 0 45px;
+        padding: 18px 0 28px;
     }
 
     .hero-grid {
         display: flex;
 
-        /* Everything stacks vertically */
+        /* Stack photo and bio vertically */
         flex-direction: column;
 
-        gap: 30px;
+        gap: 16px;
 
         align-items: center;
     }
 
 
     /* --------------------------------
-       PHOTO FIRST ON MOBILE
+       PROFILE PHOTO FIRST ON MOBILE
        -------------------------------- */
 
     .profile-card {
         order: 1;
 
         width: 100%;
-        max-width: 280px;
+        max-width: 225px;
 
         margin: 0 auto;
 
         justify-self: auto;
     }
 
-    .profile-photo {
+    .profile-photo,
+    .profile-card img {
         width: 100%;
 
-        height: 320px;
+        height: 250px;
 
         object-fit: cover;
-
         object-position: center top;
     }
 
     .profile-details {
         text-align: center;
+
         align-items: center;
 
-        padding: 14px 5px;
+        padding: 7px 2px;
+    }
+
+    .profile-details strong {
+        font-size: 0.95rem;
+    }
+
+    .profile-details span,
+    .profile-details a {
+        font-size: 0.82rem;
     }
 
     .social-links {
         justify-content: center;
+
+        margin-top: 5px;
     }
 
 
@@ -282,22 +334,50 @@ nav a {
     }
 
     .home-name {
-        font-size: 2.2rem;
-        line-height: 1.15;
+        font-size: 1.95rem;
+
+        line-height: 1.1;
+
+        margin-top: 3px;
+        margin-bottom: 8px;
     }
 
     .eyebrow {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+
+        margin-bottom: 4px;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
-        line-height: 1.55;
+        font-size: 0.94rem;
+
+        line-height: 1.4;
+
+        margin-bottom: 9px;
     }
 
-    .hero-summary,
-    .hero-text p {
-        line-height: 1.65;
+    .welcome-heading {
+        font-size: 1.1rem;
+
+        margin-top: 12px;
+        margin-bottom: 4px;
+    }
+
+    .hero-summary {
+        font-size: 0.94rem;
+
+        line-height: 1.5;
+
+        margin-bottom: 6px;
+    }
+
+    .hero-text > p:not(.eyebrow):not(.hero-subtitle):not(.hero-summary) {
+        font-size: 0.94rem;
+
+        line-height: 1.5;
+
+        margin-top: 6px;
+        margin-bottom: 6px;
     }
 
 
@@ -307,26 +387,30 @@ nav a {
         display: flex;
         flex-wrap: wrap;
 
-        gap: 9px;
+        gap: 7px;
 
-        margin-top: 20px;
+        margin-top: 11px;
     }
 
     .button {
-        font-size: 0.88rem;
+        padding: 7px 10px;
+
+        font-size: 0.8rem;
     }
 
 
     /* INTERESTS */
 
     .interests {
-        margin-top: 18px;
+        margin-top: 9px;
 
-        gap: 7px;
+        gap: 5px;
     }
 
     .interests span {
-        font-size: 0.8rem;
+        padding: 5px 8px;
+
+        font-size: 0.72rem;
     }
 
 
@@ -334,6 +418,7 @@ nav a {
 
     .footer-wrap {
         display: flex;
+
         flex-direction: column;
 
         align-items: center;
@@ -343,6 +428,58 @@ nav a {
         gap: 5px;
     }
 }
+
+
+/* ========================================
+   VERY SMALL MOBILE DEVICES
+   ======================================== */
+
+@media (max-width: 420px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    nav {
+        gap: 8px 12px;
+    }
+
+    nav a {
+        font-size: 0.84rem;
+    }
+
+    .hero {
+        padding-top: 15px;
+    }
+
+    .profile-card {
+        max-width: 205px;
+    }
+
+    .profile-photo,
+    .profile-card img {
+        height: 230px;
+    }
+
+    .home-name {
+        font-size: 1.75rem;
+    }
+
+    .hero-actions {
+        gap: 6px;
+    }
+
+    .button {
+        font-size: 0.77rem;
+
+        padding: 6px 9px;
+    }
+
+    .interests span {
+        font-size: 0.7rem;
+    }
+}
+
 
 /* Teaching page section labels */
 
@@ -379,442 +516,15 @@ nav a {
 }
 
 /* Pre-doctoral publications */
+
 .publications-heading {
-    margin-top: 45px;
-    margin-bottom: 8px;
-}
-
-/* Work in Progress */
-.wip-heading {
-    margin-top: 50px;
-    margin-bottom: 5px;
-}
-
-.welcome-heading {
-    font-size: 1.35rem;
-    font-weight: 700;
-    margin-top: 28px;
+    margin-top: 40px;
     margin-bottom: 10px;
 }
 
-/* =========================
-   GLOBAL
-   ========================= */
-
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.6;
-    color: #17202a;
-    background: #ffffff;
-}
-
-.container {
-    width: min(1100px, calc(100% - 40px));
-    margin: 0 auto;
-}
-
-
-/* =========================
-   NAVIGATION
-   ========================= */
-
-.site-header {
-    border-bottom: 1px solid #d9dee3;
-    background: #ffffff;
-}
-
-.nav-wrap {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 60px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #17202a;
-    font-size: 0.95rem;
-}
-
-nav a:hover {
-    color: #173f5f;
-}
-
-
-/* =========================
-   HERO - DESKTOP
-   ========================= */
-
-.hero {
-    padding: 30px 0 35px;
-}
-
-.hero-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 275px;
-    gap: 45px;
-    align-items: start;
-}
-
-
-/* =========================
-   LEFT SIDE
-   ========================= */
-
-.hero-text {
-    min-width: 0;
-    order: 1;
-}
-
-.eyebrow {
-    margin: 0 0 6px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #173f5f;
-}
-
-.home-name {
-    font-size: 2.45rem;
-    line-height: 1.1;
-    font-weight: 500;
-    margin: 0 0 10px;
-}
-
-.hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.45;
-    color: #5e6873;
-    margin: 0 0 14px;
-}
-
-.welcome-heading {
-    font-size: 1.2rem;
-    line-height: 1.25;
-    font-weight: 700;
-    margin: 16px 0 6px;
-}
-
-.hero-summary {
-    margin: 0 0 8px;
-    line-height: 1.55;
-}
-
-.hero-text > p:not(.eyebrow):not(.hero-subtitle):not(.hero-summary) {
-    margin: 7px 0;
-    line-height: 1.55;
-}
-
-
-/* =========================
-   BUTTONS
-   ========================= */
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.button {
-    display: inline-block;
-    padding: 8px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.85rem;
-}
-
-.button.primary {
-    background: #173f5f;
-    color: #ffffff;
-    border: 1px solid #173f5f;
-}
-
-.button.secondary {
-    color: #17202a;
-    border: 1px solid #d9dee3;
-    background: #ffffff;
-}
-
-
-/* =========================
-   RESEARCH INTERESTS
-   ========================= */
-
-.interests {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 12px;
-}
-
-.interests span {
-    border: 1px solid #d9dee3;
-    border-radius: 999px;
-    padding: 5px 9px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.76rem;
-    background: #ffffff;
-}
-
-
-/* =========================
-   PROFILE CARD - DESKTOP
-   ========================= */
-
-.profile-card {
-    order: 2;
-    width: 100%;
-    max-width: 275px;
-    justify-self: end;
-}
-
-.profile-photo,
-.profile-card img {
-    display: block;
-    width: 100%;
-    height: 305px;
-    object-fit: cover;
-    object-position: center top;
-}
-
-.profile-details {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    padding: 10px 2px;
-}
-
-.profile-details strong {
-    font-size: 1rem;
-}
-
-.profile-details span,
-.profile-details a {
-    font-size: 0.86rem;
-}
-
-.profile-details a {
-    color: #173f5f;
-}
-
-
-/* =========================
-   SOCIAL LINKS
-   ========================= */
-
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 7px;
-}
-
-.social-links a {
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-
-/* =========================
-   FOOTER
-   ========================= */
-
-footer {
-    border-top: 1px solid #d9dee3;
-    padding: 16px 0;
-}
-
-.footer-wrap {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    font-size: 0.85rem;
-    color: #5e6873;
-}
-
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 768px) {
-
-    .container {
-        width: calc(100% - 28px);
-    }
-
-    /* Navigation */
-    .nav-wrap {
-        justify-content: center;
-        min-height: auto;
-        padding: 12px 0;
-    }
-
-    nav {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 9px 15px;
-    }
-
-    nav a {
-        font-size: 0.88rem;
-    }
-
-    /* Hero */
-    .hero {
-        padding: 20px 0 28px;
-    }
-
-    .hero-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        align-items: center;
-    }
-
-    /* Photo first */
-    .profile-card {
-        order: 1;
-        width: 100%;
-        max-width: 225px;
-        margin: 0 auto;
-        justify-self: auto;
-    }
-
-    .profile-photo,
-    .profile-card img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-        object-position: center top;
-    }
-
-    .profile-details {
-        text-align: center;
-        align-items: center;
-        padding: 8px 2px;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    /* Bio second */
-    .hero-text {
-        order: 2;
-        width: 100%;
-    }
-
-    .eyebrow {
-        font-size: 0.7rem;
-        margin-bottom: 5px;
-    }
-
-    .home-name {
-        font-size: 1.95rem;
-        line-height: 1.1;
-        margin-bottom: 8px;
-    }
-
-    .hero-subtitle {
-        font-size: 0.95rem;
-        line-height: 1.4;
-        margin-bottom: 10px;
-    }
-
-    .welcome-heading {
-        font-size: 1.1rem;
-        margin: 13px 0 5px;
-    }
-
-    .hero-summary,
-    .hero-text > p:not(.eyebrow):not(.hero-subtitle) {
-        font-size: 0.95rem;
-        line-height: 1.5;
-    }
-
-    /* Buttons */
-    .hero-actions {
-        gap: 7px;
-        margin-top: 12px;
-    }
-
-    .button {
-        padding: 7px 10px;
-        font-size: 0.8rem;
-    }
-
-    /* Interests */
-    .interests {
-        gap: 5px;
-        margin-top: 10px;
-    }
-
-    .interests span {
-        padding: 5px 8px;
-        font-size: 0.72rem;
-    }
-
-    /* Footer */
-    .footer-wrap {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 4px;
-    }
-}
-
-
-/* =========================
-   VERY SMALL PHONES
-   ========================= */
-
-@media (max-width: 420px) {
-
-    .home-name {
-        font-size: 1.75rem;
-    }
-
-    .profile-card {
-        max-width: 205px;
-    }
-
-    .profile-photo,
-    .profile-card img {
-        height: 230px;
-    }
-
-    .hero-actions {
-        justify-content: flex-start;
-    }
-
-    nav {
-        gap: 8px 12px;
-    }
-
-    nav a {
-        font-size: 0.84rem;
-    }
+/* Work in Progress */
+
+.wip-heading {
+    margin-top: 40px;
+    margin-bottom: 10px;
 }
