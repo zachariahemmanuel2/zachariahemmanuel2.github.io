@@ -520,9 +520,7 @@ nav a {
     margin-bottom: 5px;
 }
 
-.publications-heading + .paper {
-    margin-top: 0;
-}
+
 /* Work in Progress */
 
 .wip-heading {
