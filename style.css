@@ -372,3 +372,8 @@ nav a {
     margin-bottom: 12px;
     font-weight: 500;
 }
+
+.research-heading:last-of-type,
+.paper:last-of-type {
+    margin-bottom: 60px;
+}
