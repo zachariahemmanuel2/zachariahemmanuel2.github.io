@@ -357,3 +357,9 @@ nav a {
 .institution-gap {
     height: 25px;
 }
+
+.teaching-section h3 {
+    color: #777777 !important;
+    font-weight: 400 !important;
+    font-size: 1rem;
+}
