@@ -530,3 +530,17 @@ nav a {
     margin-top: 40px;
     margin-bottom: 10px;
 }
+
+/* Pre-Doctoral Publications spacing */
+
+.publications-heading {
+    margin-bottom: 5px;
+}
+
+.publications-heading + .paper {
+    margin-top: 0;
+}
+
+.publications-heading + .paper h3 {
+    margin-top: 0;
+}
