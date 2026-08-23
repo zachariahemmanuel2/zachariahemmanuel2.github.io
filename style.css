@@ -515,96 +515,21 @@ nav a {
     margin-bottom: 60px;
 }
 
-.publications-heading {
-    margin-top: 30px;
-    margin-bottom: 0px;
-}
 
-.publications-heading + .paper {
-    margin-top: 0;
-}
 
-/* Work in Progress */
-
-.wip-heading {
-    margin-top: 40px;
-    margin-bottom: 10px;
-}
 
 /* Pre-Doctoral Publications spacing */
 
 .publications-heading {
-    margin-bottom: 5px;
-}
-
-.publications-heading + .paper {
-    margin-top: 0;
-}
-
-.publications-heading + .paper h3 {
-    margin-top: 0;
-}
-
-/* Reduce space between Pre-Doctoral Publications
-   and the first publication only */
-
-.publications-heading {
-    margin-bottom: 0;
-}
-
-.publications-heading + .paper {
-    margin-top: 0;
-    padding-top: 1px;
-}
-
-.publications-heading + .paper > h3 {
-    margin-top: 3px;
-}
-
-/* Only reduce spacing after Pre-Doctoral Publications */
-
-.publications-heading {
-    margin-bottom: 0 !important;
-}
-
-.publications-heading + article.paper {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-.publications-heading + article.paper > h3 {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-/* Only controls spacing under Pre-Doctoral Publications */
-
-.publications-heading {
-    margin-bottom: 8px !important;
+    margin-top: 30px;
+    margin-bottom: 8px;
 }
 
 .first-publication {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    display: flow-root;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .first-publication h3 {
-    margin-top: 0 !important;
-}
-
-/* Spacing only between Pre-Doctoral Publications
-   and the first publication */
-
-.publications-heading {
-    margin-bottom: 8px !important;
-}
-
-.first-publication {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-.first-publication h3 {
-    margin-top: 0 !important;
+    margin-top: 0;
 }
