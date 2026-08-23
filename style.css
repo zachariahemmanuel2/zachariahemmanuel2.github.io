@@ -576,3 +576,19 @@ nav a {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+
+/* Only controls spacing under Pre-Doctoral Publications */
+
+.publications-heading {
+    margin-bottom: 8px !important;
+}
+
+.first-publication {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    display: flow-root;
+}
+
+.first-publication h3 {
+    margin-top: 0 !important;
+}
