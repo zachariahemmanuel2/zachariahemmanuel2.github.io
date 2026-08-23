@@ -592,3 +592,19 @@ nav a {
 .first-publication h3 {
     margin-top: 0 !important;
 }
+
+/* Spacing only between Pre-Doctoral Publications
+   and the first publication */
+
+.publications-heading {
+    margin-bottom: 8px !important;
+}
+
+.first-publication {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.first-publication h3 {
+    margin-top: 0 !important;
+}
