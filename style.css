@@ -290,14 +290,14 @@ nav a {
     }
 
     .profile-photo,
-    .profile-card img {
-        width: 100%;
 
-        height: 250px;
+   .profile-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
-        object-fit: cover;
-        object-position: center top;
-    }
 
     .profile-details {
         text-align: center;
@@ -536,9 +536,3 @@ nav a {
 
 
 
-.profile-card img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-}
