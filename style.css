@@ -533,3 +533,12 @@ nav a {
 .first-publication h3 {
     margin-top: 0;
 }
+
+
+
+.profile-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+}
