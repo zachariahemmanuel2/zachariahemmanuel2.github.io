@@ -721,6 +721,7 @@ nav a {
     font-weight: 700;
     text-align: center;
     margin: 0 0 18px 0;
+   white-space: nowrap;
 }
 
 /* Keep profile details below photo */
@@ -741,3 +742,4 @@ nav a {
     gap: 12px;
     margin-top: 8px !important;
 }
+
