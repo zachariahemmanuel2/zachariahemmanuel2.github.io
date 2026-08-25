@@ -574,5 +574,58 @@ nav a {
     max-width: 800px;
 }
 
+/* =========================================
+   FORCE PROFILE PHOTO ABOVE BIO
+   HOMEPAGE ONLY
+   ========================================= */
+
+#home .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+/* Profile must come FIRST */
+
+#home .profile-card {
+    order: 1 !important;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 25px !important;
+    text-align: center;
+}
+
+/* Biography must come SECOND */
+
+#home .hero-text {
+    order: 2 !important;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Profile picture */
+
+#home .profile-photo {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Center profile information */
+
+#home .profile-details {
+    text-align: center;
+}
+
+/* Center social icons */
+
+#home .social-links {
+    justify-content: center;
+}
+
 
 
