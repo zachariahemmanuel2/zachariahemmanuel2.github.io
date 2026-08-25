@@ -831,3 +831,40 @@ nav a {
         max-width: 100% !important;
     }
 }
+
+/* FINAL FIX FOR PROFILE NAME */
+
+#home .profile-card {
+    width: 100% !important;
+    max-width: 700px !important;
+    overflow: visible !important;
+    text-align: center !important;
+}
+
+#home .profile-name {
+    display: block !important;
+    width: 100% !important;
+
+    font-size: 2.2rem !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+
+    text-align: center !important;
+
+    white-space: normal !important;
+    overflow: visible !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 600px) {
+
+    #home .profile-name {
+        font-size: 1.7rem !important;
+        white-space: normal !important;
+    }
+
+}
