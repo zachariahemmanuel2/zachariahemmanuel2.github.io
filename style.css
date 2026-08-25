@@ -868,3 +868,21 @@ nav a {
     }
 
 }
+
+/* Reduce space between social icons and Welcome heading */
+
+#home .hero-grid {
+    gap: 8px !important;
+}
+
+#home .profile-card {
+    margin-bottom: 0 !important;
+}
+
+#home .hero-text {
+    margin-top: 0 !important;
+}
+
+#home .home-name {
+    margin-top: 0 !important;
+}
