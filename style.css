@@ -627,5 +627,58 @@ nav a {
     justify-content: center;
 }
 
+/* =========================================
+   HOMEPAGE ONLY: PHOTO ABOVE BIO
+   ========================================= */
 
+#home .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+}
+
+/* PHOTO FIRST */
+
+#home .profile-card {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto !important;
+    justify-self: auto !important;
+    text-align: center !important;
+}
+
+/* CIRCULAR PROFILE PHOTO */
+
+#home .profile-photo,
+#home .profile-card img {
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 50% !important;
+    margin: 0 auto 12px !important;
+}
+
+/* CENTER PROFILE DETAILS */
+
+#home .profile-details {
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* CENTER SOCIAL ICONS */
+
+#home .social-links {
+    justify-content: center !important;
+}
+
+/* BIO SECOND */
+
+#home .hero-text {
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 800px !important;
+}
 
