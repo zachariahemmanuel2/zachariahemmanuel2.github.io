@@ -635,7 +635,7 @@ nav a {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 25px !important;
+    gap: 12px !important;
 }
 
 /* PHOTO FIRST */
@@ -886,3 +886,4 @@ nav a {
 #home .home-name {
     margin-top: 0 !important;
 }
+
