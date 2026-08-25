@@ -887,3 +887,8 @@ nav a {
     margin-top: 0 !important;
 }
 
+#home .home-name {
+    text-align: center !important;
+    width: 100% !important;
+}
+
