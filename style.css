@@ -751,3 +751,10 @@ nav a {
     white-space: nowrap;
 }
 
+/* Give the name enough width */
+
+#home .profile-card {
+    max-width: 500px !important;
+    width: 100% !important;
+    text-align: center;
+}
