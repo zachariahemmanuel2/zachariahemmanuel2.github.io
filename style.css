@@ -892,3 +892,22 @@ nav a {
     width: 100% !important;
 }
 
+@media (max-width: 600px) {
+
+    #home .profile-name {
+        font-size: 1.55rem !important;
+        white-space: nowrap;
+    }
+
+}
+
+/* Center Welcome heading on homepage only */
+
+#home .hero-text .home-name {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
