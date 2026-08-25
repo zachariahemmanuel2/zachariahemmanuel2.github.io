@@ -713,3 +713,31 @@ nav a {
     margin-top: 10px !important;
 }
 
+/* Homepage profile name */
+
+#home .profile-name {
+    font-size: 2.45rem !important;
+    line-height: 1.1;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 18px 0;
+}
+
+/* Keep profile details below photo */
+
+#home .profile-details {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+/* Keep social links below profile details */
+
+#home .social-links {
+    display: flex !important;
+    order: 2 !important;
+    justify-content: center !important;
+    gap: 12px;
+    margin-top: 8px !important;
+}
