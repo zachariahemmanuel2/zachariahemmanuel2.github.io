@@ -692,3 +692,24 @@ nav a {
     margin: 0 0 18px 0;
 }
 
+/* Keep profile information and social icons in correct order */
+
+#home .profile-details {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+#home .profile-details span {
+    order: 1 !important;
+}
+
+#home .social-links {
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 14px;
+    margin-top: 10px !important;
+}
+
