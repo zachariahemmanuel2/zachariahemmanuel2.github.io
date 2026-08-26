@@ -911,3 +911,13 @@ nav a {
     margin-left: auto !important;
     margin-right: auto !important;
 }
+
+/* Square profile picture on homepage only */
+
+#home .profile-photo {
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover !important;
+    object-position: center top !important;
+    border-radius: 0 !important;
+}
