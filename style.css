@@ -921,10 +921,4 @@ nav a {
     object-position: center top !important;
     border-radius: 0 !important;
 }
-/* Force homepage profile picture to square */
-#home img.profile-photo {
-    width: 180px !important;
-    height: 180px !important;
-    border-radius: 0 !important;
-    object-fit: cover !important;
-}
+
