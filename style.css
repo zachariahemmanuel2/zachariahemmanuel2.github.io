@@ -607,7 +607,7 @@ nav a {
 
 #home .profile-photo {
     width: 180px;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     object-position: center top;
     border-radius: 0%;
@@ -654,7 +654,7 @@ nav a {
 #home .profile-photo,
 #home .profile-card img {
     width: 180px !important;
-    height: 180px !important;
+    height: 200px !important;
     object-fit: cover !important;
     object-position: center top !important;
     border-radius: 0% !important;
@@ -810,7 +810,7 @@ nav a {
 
 #home .profile-photo {
     width: 180px !important;
-    height: 180px !important;
+    height: 200px !important;
     object-fit: cover !important;
     object-position: center top !important;
     border-radius: 0% !important;
