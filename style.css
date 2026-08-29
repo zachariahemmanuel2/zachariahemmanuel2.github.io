@@ -988,3 +988,49 @@ nav a {
   }
 
 }
+
+/* ===== FORCE PROFILE LEFT / BIO RIGHT ===== */
+
+.hero-grid {
+  display: grid !important;
+  grid-template-columns: 280px minmax(0, 1fr) !important;
+  column-gap: 60px !important;
+  align-items: start !important;
+}
+
+.profile-card {
+  grid-column: 1 !important;
+  text-align: center;
+}
+
+.hero-text {
+  grid-column: 2 !important;
+  text-align: left;
+}
+
+.profile-photo {
+  display: block;
+  width: 220px;
+  height: auto;
+  margin: 0 auto 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .profile-card,
+  .hero-text {
+    grid-column: 1 !important;
+  }
+
+  .profile-card {
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+}
