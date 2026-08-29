@@ -629,3 +629,7 @@ footer {
         height: 520px;
     }
 }
+
+.no-wrap {
+    white-space: nowrap;
+}
