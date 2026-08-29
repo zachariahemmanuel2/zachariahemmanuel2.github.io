@@ -1,1036 +1,134 @@
-/* ========================================
-   MAIN CONTAINER
-   ======================================== */
-
-.container {
-    width: min(1100px, calc(100% - 40px));
-    margin: 0 auto;
-}
-
-
-/* ========================================
-   NAVIGATION
-   ======================================== */
-
-.nav-wrap {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 14px 0;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-
-/* ========================================
-   HERO SECTION - DESKTOP
-   ======================================== */
-
-.hero {
-    padding: 30px 0 35px;
-}
-
-.hero-grid {
-    display: grid;
-
-    /* Bio on left, profile photo on right */
-    grid-template-columns: minmax(0, 1fr) 275px;
-
-    gap: 45px;
-
-    align-items: start;
-}
-
-
-/* ========================================
-   BIO - LEFT SIDE
-   ======================================== */
-
-.hero-text {
-    min-width: 0;
-    order: 1;
-}
-
-.home-name {
-    font-size: 2.45rem;
-    line-height: 1.1;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.eyebrow {
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.45;
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.welcome-heading {
-    font-size: 1.2rem;
-    font-weight: 700;
-    line-height: 1.25;
-    margin-top: 15px;
-    margin-bottom: 6px;
-}
-
-.hero-summary {
-    line-height: 1.55;
-    margin-top: 0;
-    margin-bottom: 8px;
-}
-
-.hero-text > p:not(.eyebrow):not(.hero-subtitle):not(.hero-summary) {
-    margin-top: 7px;
-    margin-bottom: 7px;
-    line-height: 1.55;
-}
-
-
-/* ========================================
-   PROFILE - RIGHT SIDE
-   ======================================== */
-
-.profile-card {
-    order: 2;
-
-    width: 100%;
-    max-width: 275px;
-
-    justify-self: end;
-
-    overflow: hidden;
-}
-
-
-/* PROFILE PHOTO */
-
-.profile-photo,
-.profile-card img {
-    display: block;
-
-    width: 100%;
-    height: 305px;
-
-    object-fit: cover;
-
-    /* Keeps face toward upper part of portrait */
-    object-position: center top;
-}
-
-
-/* PROFILE DETAILS */
-
-.profile-details {
-    padding: 10px 3px;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 3px;
-}
-
-.profile-details strong {
-    font-size: 1rem;
-}
-
-.profile-details span {
-    font-size: 0.86rem;
-}
-
-.profile-details a {
-    font-size: 0.86rem;
-}
-
-
-/* ========================================
-   BUTTONS
-   ======================================== */
-
-.hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 14px;
-}
-
-.button {
-    display: inline-block;
-
-    padding: 8px 12px;
-
-    font-size: 0.85rem;
-
-    text-decoration: none;
-}
-
-
-/* ========================================
-   RESEARCH INTERESTS
-   ======================================== */
-
-.interests {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 6px;
-
-    margin-top: 11px;
-}
-
-.interests span {
-    padding: 5px 9px;
-
-    font-size: 0.76rem;
-}
-
-
-/* ========================================
-   SOCIAL LINKS
-   ======================================== */
-
-.social-links {
-    display: flex;
-    align-items: center;
-
-    gap: 12px;
-
-    margin-top: 7px;
-}
-
-.social-links a {
-    font-size: 1.2rem;
-
-    text-decoration: none;
-}
-
-
-/* ========================================
-   MOBILE
-   ======================================== */
-
-@media (max-width: 768px) {
-
-    .container {
-        width: calc(100% - 28px);
-    }
-
-
-    /* NAVIGATION */
-
-    .nav-wrap {
-        justify-content: center;
-
-        padding: 11px 0;
-    }
-
-    nav {
-        width: 100%;
-
-        display: flex;
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        gap: 9px 15px;
-    }
-
-    nav a {
-        font-size: 0.88rem;
-    }
-
-
-    /* ====================================
-       HERO - MOBILE
-       ==================================== */
-
-    .hero {
-        padding: 18px 0 28px;
-    }
-
-    .hero-grid {
-        display: flex;
-
-        /* Stack photo and bio vertically */
-        flex-direction: column;
-
-        gap: 16px;
-
-        align-items: center;
-    }
-
-
-    /* --------------------------------
-       PROFILE PHOTO FIRST ON MOBILE
-       -------------------------------- */
-
-    .profile-card {
-        order: 1;
-
-        width: 100%;
-        max-width: 225px;
-
-        margin: 0 auto;
-
-        justify-self: auto;
-    }
-
-    .profile-photo,
-
-  .profile-card img {
-        width: 100%;
-
-        height: 250px;
-
-        object-fit: cover;
-        object-position: center top;
-    }
-
-    .profile-details {
-        text-align: center;
-
-        align-items: center;
-
-        padding: 7px 2px;
-    }
-
-    .profile-details strong {
-        font-size: 0.95rem;
-    }
-
-    .profile-details span,
-    .profile-details a {
-        font-size: 0.82rem;
-    }
-
-    .social-links {
-        justify-content: center;
-
-        margin-top: 5px;
-    }
-
-
-    /* --------------------------------
-       BIO SECOND ON MOBILE
-       -------------------------------- */
-
-    .hero-text {
-        order: 2;
-
-        width: 100%;
-    }
-
-    .home-name {
-        font-size: 1.95rem;
-
-        line-height: 1.1;
-
-        margin-top: 3px;
-        margin-bottom: 8px;
-    }
-
-    .eyebrow {
-        font-size: 0.7rem;
-
-        margin-bottom: 4px;
-    }
-
-    .hero-subtitle {
-        font-size: 0.94rem;
-
-        line-height: 1.4;
-
-        margin-bottom: 9px;
-    }
-
-    .welcome-heading {
-        font-size: 1.1rem;
-
-        margin-top: 12px;
-        margin-bottom: 4px;
-    }
-
-    .hero-summary {
-        font-size: 0.94rem;
-
-        line-height: 1.5;
-
-        margin-bottom: 6px;
-    }
-
-    .hero-text > p:not(.eyebrow):not(.hero-subtitle):not(.hero-summary) {
-        font-size: 0.94rem;
-
-        line-height: 1.5;
-
-        margin-top: 6px;
-        margin-bottom: 6px;
-    }
-
-
-    /* BUTTONS */
-
-    .hero-actions {
-        display: flex;
-        flex-wrap: wrap;
-
-        gap: 7px;
-
-        margin-top: 11px;
-    }
-
-    .button {
-        padding: 7px 10px;
-
-        font-size: 0.8rem;
-    }
-
-
-    /* INTERESTS */
-
-    .interests {
-        margin-top: 9px;
-
-        gap: 5px;
-    }
-
-    .interests span {
-        padding: 5px 8px;
-
-        font-size: 0.72rem;
-    }
-
-
-    /* FOOTER */
-
-    .footer-wrap {
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-
-        text-align: center;
-
-        gap: 5px;
-    }
-}
-
-
-/* ========================================
-   VERY SMALL MOBILE DEVICES
-   ======================================== */
-
-@media (max-width: 420px) {
-
-    .container {
-        width: calc(100% - 24px);
-    }
-
-    nav {
-        gap: 8px 12px;
-    }
-
-    nav a {
-        font-size: 0.84rem;
-    }
-
-    .hero {
-        padding-top: 15px;
-    }
-
-    .profile-card {
-        max-width: 205px;
-    }
-
-    .profile-photo,
-    .profile-card img {
-        height: 230px;
-    }
-
-    .home-name {
-        font-size: 1.75rem;
-    }
-
-    .hero-actions {
-        gap: 6px;
-    }
-
-    .button {
-        font-size: 0.77rem;
-
-        padding: 6px 9px;
-    }
-
-    .interests span {
-        font-size: 0.7rem;
-    }
-}
-
-
-/* Teaching page section labels */
-
-.teaching-section h3 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #777777;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-
-.institution-gap {
-    height: 25px;
-}
-
-.teaching-section h3 {
-    color: #777777 !important;
-    font-weight: 400 !important;
-    font-size: 1rem;
-}
-
-.contact-social {
-    margin-top: 30px;
-}
-
-.contact-social-title {
-    margin-bottom: 12px;
-    font-weight: 500;
-}
-
-.research-heading:last-of-type,
-.paper:last-of-type {
-    margin-bottom: 60px;
-}
-
-
-
-
-/* Pre-Doctoral Publications spacing */
-
-.publications-heading {
-    margin-top: 30px;
-    margin-bottom: 8px;
-}
-
-.first-publication {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.first-publication h3 {
-    margin-top: 0;
-}
-
-#home .hero-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-#home .profile-card {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    margin: 0 auto 30px;
-}
-
-#home .profile-photo {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 0%;
-    display: block;
-    margin: 0 auto 15px;
-}
-
-#home .profile-details {
-    text-align: center;
-    align-items: center;
-}
-
-#home .social-links {
-    justify-content: center;
-}
-
-#home .hero-text {
-    width: 100%;
-    max-width: 800px;
-}
-
 /* =========================================
-   FORCE PROFILE PHOTO ABOVE BIO
    HOMEPAGE ONLY
+   PROFILE LEFT / BIO RIGHT
    ========================================= */
 
 #home .hero-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    column-gap: 60px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Profile must come FIRST */
-
-#home .profile-card {
-    order: 1 !important;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto 25px !important;
-    text-align: center;
-}
-
-/* Biography must come SECOND */
-
-#home .hero-text {
-    order: 2 !important;
-    width: 100%;
-    max-width: 800px;
-}
-
-/* Profile picture */
-
-#home .profile-photo {
-    width: 180px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 0%;
-    display: block;
-    margin: 0 auto 15px;
-}
-
-/* Center profile information */
-
-#home .profile-details {
-    text-align: center;
-}
-
-/* Center social icons */
-
-#home .social-links {
-    justify-content: center;
-}
 
 /* =========================================
-   HOMEPAGE ONLY: PHOTO ABOVE BIO
+   LEFT SIDE - PROFILE
    ========================================= */
 
-#home .hero-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 12px !important;
-}
-
-/* PHOTO FIRST */
-
 #home .profile-card {
-    order: 1 !important;
-    width: 100% !important;
-    max-width: 300px !important;
-    margin: 0 auto !important;
-    justify-self: auto !important;
-    text-align: center !important;
+    order: 1;
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+    justify-self: start;
+    text-align: center;
+    overflow: visible;
 }
 
-/* CIRCULAR PROFILE PHOTO */
+#home .profile-name {
+    display: block;
+    width: 100%;
+    margin: 0 0 18px 0;
+
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.15;
+
+    text-align: center;
+    white-space: normal;
+}
 
 #home .profile-photo,
 #home .profile-card img {
-    width: 180px !important;
-    height: 220px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    border-radius: 0% !important;
-    margin: 0 auto 12px !important;
-}
+    display: block;
 
-/* CENTER PROFILE DETAILS */
+    width: 180px;
+    height: 220px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 0;
+
+    margin: 0 auto 12px;
+}
 
 #home .profile-details {
-    align-items: center !important;
-    text-align: center !important;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-/* CENTER SOCIAL ICONS */
+    text-align: center;
+}
 
 #home .social-links {
-    justify-content: center !important;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 8px;
 }
 
-/* BIO SECOND */
+
+/* =========================================
+   RIGHT SIDE - BIOGRAPHY
+   ========================================= */
 
 #home .hero-text {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: 800px !important;
+    order: 2;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+
+    text-align: left;
 }
 
-/* Name above profile picture */
-
-#home .profile-name {
-    font-size: 2.25rem !important;
-    font-weight: 700;
-    line-height: 1.15;
-    text-align: center;
-    margin: 0 0 18px 0;
+#home .home-name {
+    margin-top: 0;
+    text-align: left;
 }
 
-/* Keep profile information and social icons in correct order */
 
-#home .profile-details {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-}
+/* =========================================
+   MOBILE HOMEPAGE ONLY
+   ========================================= */
 
-#home .profile-details span {
-    order: 1 !important;
-}
+@media (max-width: 768px) {
 
-#home .social-links {
-    order: 2 !important;
-    display: flex !important;
-    justify-content: center !important;
-    gap: 14px;
-    margin-top: 10px !important;
-}
-
-/* Homepage profile name */
-
-#home .profile-name {
-    font-size: 2.45rem !important;
-    line-height: 1.1;
-    font-weight: 700;
-    text-align: center;
-    margin: 0 0 18px 0;
-}
-
-/* Keep profile details below photo */
-
-#home .profile-details {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-}
-
-/* Keep social links below profile details */
-
-#home .social-links {
-    display: flex !important;
-    order: 2 !important;
-    justify-content: center !important;
-    gap: 12px;
-    margin-top: 8px !important;
-}
-
-#home .profile-name {
-    font-size: 2.45rem !important;
-    font-weight: 700;
-    line-height: 1.1;
-    text-align: center;
-    margin: 0 0 18px 0;
-    white-space: nowrap;
-}
-
-/* Give the name enough width */
-
-#home .profile-card {
-    max-width: 500px !important;
-    width: 100% !important;
-    text-align: center;
-}
-
-#home .profile-card {
-    width: 100% !important;
-    max-width: 700px !important;
-    overflow: visible !important;
-    text-align: center;
-}
-
-#home .profile-name {
-    font-size: 2.2rem !important;
-    white-space: nowrap;
-    overflow: visible !important;
-    text-align: center;
-}
-
-@media (max-width: 600px) {
-
-    #home .profile-name {
-        font-size: 1.55rem !important;
-        white-space: nowrap;
-    }
-
-}
-
-/* Final homepage profile layout */
-
-#home .profile-card {
-    width: 100% !important;
-    max-width: 700px !important;
-    margin: 0 auto 25px !important;
-    text-align: center !important;
-    overflow: visible !important;
-}
-
-#home .profile-name {
-    display: block !important;
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 auto 18px !important;
-    padding: 0 10px !important;
-
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
-    line-height: 1.15 !important;
-
-    text-align: center !important;
-    white-space: normal !important;
-    overflow: visible !important;
-}
-
-#home .profile-photo {
-    width: 180px !important;
-    height: 220px !important;
-    object-fit: cover !important;
-    object-position: center top !important;
-    border-radius: 0% !important;
-    display: block !important;
-    margin: 0 auto 12px !important;
-}
-
-@media (max-width: 600px) {
-
-    #home .profile-name {
-        font-size: 1.8rem !important;
-        white-space: normal !important;
-        overflow-wrap: normal !important;
-        word-break: normal !important;
+    #home .hero-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
     }
 
     #home .profile-card {
-        max-width: 100% !important;
+        order: 1;
+
+        width: 100%;
+        max-width: 300px;
+
+        margin: 0 auto;
+
+        text-align: center;
     }
-}
 
-/* FINAL FIX FOR PROFILE NAME */
+    #home .hero-text {
+        order: 2;
 
-#home .profile-card {
-    width: 100% !important;
-    max-width: 700px !important;
-    overflow: visible !important;
-    text-align: center !important;
-}
+        width: 100%;
+        max-width: none;
 
-#home .profile-name {
-    display: block !important;
-    width: 100% !important;
+        text-align: left;
+    }
 
-    font-size: 2.2rem !important;
-    font-weight: 700 !important;
-    line-height: 1.15 !important;
-
-    text-align: center !important;
-
-    white-space: normal !important;
-    overflow: visible !important;
-    word-break: normal !important;
-    overflow-wrap: normal !important;
-
-    margin: 0 0 18px 0 !important;
-    padding: 0 !important;
-}
-
-@media (max-width: 600px) {
+    #home .home-name {
+        text-align: left;
+    }
 
     #home .profile-name {
-        font-size: 1.7rem !important;
-        white-space: normal !important;
+        font-size: 1.7rem;
     }
-
-}
-
-/* Reduce space between social icons and Welcome heading */
-
-#home .hero-grid {
-    gap: 8px !important;
-}
-
-#home .profile-card {
-    margin-bottom: 0 !important;
-}
-
-#home .hero-text {
-    margin-top: 0 !important;
-}
-
-#home .home-name {
-    margin-top: 0 !important;
-}
-
-#home .home-name {
-    text-align: center !important;
-    width: 100% !important;
-}
-
-@media (max-width: 600px) {
-
-    #home .profile-name {
-        font-size: 1.55rem !important;
-        white-space: nowrap;
-    }
-
-}
-
-/* Center Welcome heading on homepage only */
-
-#home .hero-text .home-name {
-    display: block !important;
-    width: 100% !important;
-    max-width: none !important;
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-#home .profile-card img.profile-photo {
-    width: 180px !important;
-    height: 220px !important;
-    border-radius: 0 !important;
-    object-fit: cover !important;
-    clip-path: none !important;
-}
-
-
-/* =====================================
-   HOME PAGE LAYOUT
-===================================== */
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-
-/* LEFT SIDE: PROFILE */
-
-.profile-card {
-  text-align: center;
-}
-
-.profile-name {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.profile-photo {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 20px auto;
-}
-
-.profile-details {
-  text-align: center;
-}
-
-
-/* RIGHT SIDE: BIO */
-
-.hero-text {
-  text-align: left;
-}
-
-.home-name {
-  margin-top: 0;
-}
-
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media (max-width: 768px) {
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .profile-card {
-    text-align: center;
-  }
-
-  .hero-text {
-    text-align: left;
-  }
-
-}
-
-/* ===== FORCE PROFILE LEFT / BIO RIGHT ===== */
-
-.hero-grid {
-  display: grid !important;
-  grid-template-columns: 280px minmax(0, 1fr) !important;
-  column-gap: 60px !important;
-  align-items: start !important;
-}
-
-.profile-card {
-  grid-column: 1 !important;
-  text-align: center;
-}
-
-.hero-text {
-  grid-column: 2 !important;
-  text-align: left;
-}
-
-.profile-photo {
-  display: block;
-  width: 220px;
-  height: auto;
-  margin: 0 auto 20px;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .profile-card,
-  .hero-text {
-    grid-column: 1 !important;
-  }
-
-  .profile-card {
-    text-align: center;
-  }
-
-  .hero-text {
-    text-align: left;
-  }
 }
