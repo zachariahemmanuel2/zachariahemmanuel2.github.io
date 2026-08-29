@@ -175,7 +175,7 @@ nav a:hover {
 .page-layout {
     display: grid;
 
-    grid-template-columns: 240px minmax(0, 1fr);
+    grid-template-columns: 280px minmax(0, 1fr);
 
     column-gap: 72px;
 
@@ -191,7 +191,7 @@ nav a:hover {
    ========================================================== */
 
 .profile-sidebar {
-    width: 240px;
+    width: 280px;
 
     text-align: left;
 }
