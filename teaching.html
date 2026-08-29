@@ -3,28 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Teaching experience of Zachariah Emmanuel, Ph.D. candidate in Economics at Georgia State University.">
 
     <title>Teaching | Zachariah Emmanuel</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 
 <body>
 
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
 <header class="site-header">
 
     <div class="container nav-wrap">
 
-        <nav>
+        <a class="site-title" href="index.html">
+            Zachariah Emmanuel
+        </a>
 
-            <a class="site-name" href="index.html">
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">
                 Home
-            </a>
-
-            <a href="cv.pdf" target="_blank">
-                CV
             </a>
 
             <a href="research.html">
@@ -35,9 +49,24 @@
                 Teaching
             </a>
 
+            <a href="cv.html">
+                CV
+            </a>
+
             <a href="contact.html">
                 Contact
             </a>
+
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                aria-label="Toggle light and dark theme"
+                title="Toggle theme">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
 
         </nav>
 
@@ -46,169 +75,287 @@
 </header>
 
 
+
+<!-- =========================================
+     MAIN PAGE
+========================================= -->
+
 <main>
 
-<section class="section alt">
-
-    <div class="container teaching-container">
-
-        <p class="section-label">
-            Teaching
-        </p>
-
-        <h2>
-            Teaching Experience
-        </h2>
+    <div class="container page-layout">
 
 
-        <!-- INSTRUCTOR OF RECORD -->
+        <!-- =====================================
+             PROFILE SIDEBAR
+        ====================================== -->
 
-        <div class="teaching-section">
+        <aside class="profile-sidebar">
 
-             <h4>
+            <img
+                src="assets/Zachariah-Profile-picture.jpg"
+                alt="Zachariah Emmanuel"
+                class="profile-photo"
+            >
+
+
+            <h2 class="profile-name">
+                Zachariah Emmanuel
+            </h2>
+
+
+            <div class="profile-details">
+
+                <span>
+                    Economics Ph.D. Candidate<br>
+                    Andrew Young School of Policy Studies<br>
+                    Georgia State University
+                </span>
+
+                <span>
+                    E-mail:
+
+                    <a href="mailto:zemmanuel2@gsu.edu">
+                        zemmanuel2@gsu.edu
+                    </a>
+                </span>
+
+            </div>
+
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="social-links">
+
+                <a href="https://scholar.google.com/citations?user=WSJ-WQcAAAAJ"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Google Scholar"
+                   title="Google Scholar">
+
+                    <i class="fa-brands fa-google-scholar"></i>
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/zachariah-emmanuel-82096583/"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="LinkedIn"
+                   title="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+
+                <a href="https://github.com/zachariahemmanuel2/"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="GitHub"
+                   title="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a href="https://orcid.org/0000-0001-9636-632X"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="ORCID"
+                   title="ORCID">
+
+                    <i class="fa-brands fa-orcid"></i>
+
+                </a>
+
+
+                <a href="https://www.researchgate.net/profile/Zachariah-Emmanuel"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="ResearchGate"
+                   title="ResearchGate">
+
+                    <i class="fa-brands fa-researchgate"></i>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             TEACHING CONTENT
+        ====================================== -->
+
+        <section class="page-content teaching-page">
+
+            <h1>Teaching</h1>
+
+
+            <!-- =================================
                  GEORGIA STATE UNIVERSITY
-             </h4> 
-                    
-            <h3>
-                Instructor of Record
-            </h3>
+            ================================== -->
+
+            <section class="teaching-group">
+
+                <h2 class="teaching-institution">
+                    Georgia State University
+                </h2>
 
 
-            <div class="teaching-item">
+                <!-- INSTRUCTOR OF RECORD -->
 
-                <h4>
-                    ECON 4970: Data Science for Economists, Summer 2026 
-
-        
-                </h4>
-              <p>
-                  <a 
-             href="assets/ECON4970-data-science-syllabus-summer-2026.pdf"
-             target="_blank"
-             rel="noopener">
-                      Syllabus
-                       </a>
-                      </p>
-                <p>
-                    Course Evaluation: 4.98 / 5.0
+                <p class="teaching-role">
+                    Instructor of Record
                 </p>
-                
-
-         
-            </div>
-
-              <!-- TEACHING ASSISTANT -->
-
-        <div class="teaching-section">
-
-            <h3>
-                Teaching Assistant
-            </h3>
-
-             <div class="teaching-item">
-
-                <h4>
-                 ECON 9760: Machine Learning (Ph.D.), Fall 2026
-                </h4>
-
-        
-            </div>
 
 
-            <div class="teaching-item">
+                <article class="teaching-item">
 
-                <h4>
-                 ECON 9720: Econometrics II (Ph.D.), Spring 2026
-                </h4>
+                    <h3>
+                        ECON 4970: Data Science for Economists, Summer 2026
+                    </h3>
 
-        
-            </div>
+                    <p>
+                        <a
+                            href="assets/ECON4970-data-science-syllabus-summer-2026.pdf"
+                            target="_blank"
+                            rel="noopener">
+                            Syllabus
+                        </a>
+                    </p>
 
-            
+                    <p>
+                        Course Evaluation: 4.98 / 5.0
+                    </p>
 
-             <div class="teaching-item">
-
-                <h4>
-                   ECON 8840: Applied Econometrics II (Masters), Spring 2024, Fall 2026
-                </h4>
-
-            </div>
-
-
-        </div>
-
-             <div class="institution-gap"></div>
+                </article>
 
 
-            <div class="teaching-item">
-                <h4>
-                 FEDERAL UNIVERSITY WUKARI 
-             </h4> 
-                 <h3>
-                Instructor of Record
-            </h3>
-                    
-                <h4>
-                    ECON 441: Economic Planning, Fall 2021
-                </h4>
 
-           
-            </div>
+                <!-- TEACHING ASSISTANT -->
+
+                <p class="teaching-role">
+                    Teaching Assistant
+                </p>
 
 
-            <div class="teaching-item">
+                <article class="teaching-item">
 
-                <h4>
-                    ECON 417: Taxation &amp; Fiscal Policy, Spring 2021
-                </h4>
+                    <h3>
+                        ECON 9760: Machine Learning (Ph.D.), Fall 2026
+                    </h3>
 
-               
-            </div>
-
-
-            <div class="teaching-item">
-
-                <h4>
-                   ECON 404: Advanced Macroeconomics II, Spring 2021
-                </h4>
-            </div>
+                </article>
 
 
-            <div class="teaching-item">
+                <article class="teaching-item">
 
-                <h4>
-                    ECON 304: Intermediate Macroeconomics II, Spring 2020
-                </h4>
+                    <h3>
+                        ECON 9720: Econometrics II (Ph.D.), Spring 2026
+                    </h3>
 
-            </div>
-
-
-            <div class="teaching-item">
-
-                <h4>
-                    ECON 103: Mathematics for Economists I , Fall 2019, Spring 2022
-                </h4>
-
-            </div>
+                </article>
 
 
-            <div class="teaching-item">
+                <article class="teaching-item">
 
-                <h4>
-                   ECON 201: Principles of Microeconomics, Fall 2019, Spring 2021, Fall 2021
-                </h4>
+                    <h3>
+                        ECON 8840: Applied Econometrics II (Masters), Spring 2024, Fall 2026
+                    </h3>
 
-            </div>
+                </article>
 
-        </div>
+            </section>
 
+
+
+            <!-- =================================
+                 FEDERAL UNIVERSITY WUKARI
+            ================================== -->
+
+            <section class="teaching-group">
+
+                <h2 class="teaching-institution">
+                    Federal University Wukari
+                </h2>
+
+
+                <p class="teaching-role">
+                    Instructor of Record
+                </p>
+
+
+                <article class="teaching-item">
+
+                    <h3>
+                        ECON 441: Economic Planning, Fall 2021
+                    </h3>
+
+                </article>
+
+
+                <article class="teaching-item">
+
+                    <h3>
+                        ECON 417: Taxation &amp; Fiscal Policy, Spring 2021
+                    </h3>
+
+                </article>
+
+
+                <article class="teaching-item">
+
+                    <h3>
+                        ECON 404: Advanced Macroeconomics II, Spring 2021
+                    </h3>
+
+                </article>
+
+
+                <article class="teaching-item">
+
+                    <h3>
+                        ECON 304: Intermediate Macroeconomics II, Spring 2020
+                    </h3>
+
+                </article>
+
+
+                <article class="teaching-item">
+
+                    <h3>
+                        ECON 103: Mathematics for Economists I , Fall 2019, Spring 2022
+                    </h3>
+
+                </article>
+
+
+                <article class="teaching-item">
+
+                    <h3>
+                        ECON 201: Principles of Microeconomics, Fall 2019, Spring 2021, Fall 2021
+                    </h3>
+
+                </article>
+
+            </section>
+
+
+        </section>
 
     </div>
 
-</section>
-
 </main>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
@@ -221,6 +368,14 @@
     </div>
 
 </footer>
+
+
+
+<!-- =========================================
+     THEME TOGGLE
+========================================= -->
+
+<script src="theme.js"></script>
 
 
 </body>
