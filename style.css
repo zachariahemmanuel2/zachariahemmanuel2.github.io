@@ -1,66 +1,205 @@
-/* =====================================================
-   HOMEPAGE ONLY
-   PROFILE LEFT + BIO RIGHT
-   ===================================================== */
+/* ==========================================================
+   ZACHARIAH EMMANUEL ACADEMIC WEBSITE
+   Shared layout inspired by the structure of Graeme Peterson's
+   academic website
+   ========================================================== */
 
-#home .hero {
-    padding: 35px 0 45px;
+
+/* ==========================================================
+   THEME VARIABLES
+   ========================================================== */
+
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --muted: #666666;
+    --heading: #222222;
+    --link: #2f5f8f;
+    --border: #e5e5e5;
+    --button-bg: #f4f4f4;
+    --button-hover: #e9e9e9;
+    --header-bg: #ffffff;
 }
 
-#home .hero-grid {
-    display: grid;
-    grid-template-columns: 270px minmax(0, 1fr);
-    column-gap: 65px;
-    align-items: start;
-    max-width: 1000px;
+html[data-theme="dark"] {
+    --bg: #181818;
+    --text: #dddddd;
+    --muted: #aaaaaa;
+    --heading: #f2f2f2;
+    --link: #85b7e8;
+    --border: #383838;
+    --button-bg: #282828;
+    --button-hover: #333333;
+    --header-bg: #181818;
+}
+
+
+/* ==========================================================
+   BASIC PAGE SETTINGS
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: var(--bg);
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.6;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
     margin: 0 auto;
 }
 
 
-/* =====================================================
-   LEFT COLUMN — PROFILE
-   ===================================================== */
+/* ==========================================================
+   TOP NAVIGATION
+   ========================================================== */
 
-#home .profile-card {
-    width: 270px;
-    max-width: 270px;
-    margin: 0;
-    padding: 0;
-
-    text-align: center;
-    justify-self: start;
-
-    overflow: visible;
-}
-
-
-/* NAME */
-
-#home .profile-name {
-    display: block;
-
+.site-header {
     width: 100%;
 
-    font-size: 1.75rem;
-    font-weight: 700;
-    line-height: 1.2;
+    background: var(--header-bg);
 
-    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
 
-    margin: 0 0 16px 0;
-    padding: 0;
+.nav-wrap {
+    min-height: 64px;
 
-    white-space: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
-/* =====================================================
-   PROFILE PICTURE
-   KEEP CURRENT SIZE AND RECTANGULAR FRAME
-   ===================================================== */
+/* LEFT NAME IN NAV */
 
-#home .profile-photo,
-#home .profile-card img.profile-photo {
+.site-title {
+    color: var(--heading);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.site-title:hover {
+    text-decoration: none;
+}
+
+
+/* RIGHT NAVIGATION */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+nav a,
+.theme-toggle {
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 0.94rem;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--link);
+    text-decoration: none;
+}
+
+
+/* THEME BUTTON */
+
+.theme-toggle {
+    border: 0;
+    background: transparent;
+
+    padding: 5px;
+
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    color: var(--link);
+}
+
+
+/* ==========================================================
+   SHARED PAGE LAYOUT
+   LEFT PROFILE + RIGHT CONTENT
+   ========================================================== */
+
+.page-layout {
+    display: grid;
+
+    grid-template-columns: 240px minmax(0, 1fr);
+
+    column-gap: 72px;
+
+    align-items: start;
+
+    padding-top: 48px;
+    padding-bottom: 60px;
+}
+
+
+/* ==========================================================
+   LEFT PROFILE SIDEBAR
+   ========================================================== */
+
+.profile-sidebar {
+    width: 240px;
+
+    text-align: left;
+}
+
+
+/* KEEP YOUR CURRENT IMAGE SIZE AND FRAME */
+
+.profile-photo {
     display: block;
 
     width: 180px;
@@ -71,247 +210,422 @@
 
     border-radius: 0;
 
-    margin: 0 auto 14px;
-}
-
-
-/* =====================================================
-   PROFILE INFORMATION
-   ===================================================== */
-
-#home .profile-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
-
-    padding: 0;
-
-    text-align: center;
-
-    gap: 3px;
-}
-
-#home .profile-details span {
-    font-size: 0.86rem;
-    line-height: 1.5;
-}
-
-#home .profile-details a {
-    font-size: 0.86rem;
-}
-
-
-/* =====================================================
-   SOCIAL ICONS
-   ===================================================== */
-
-#home .social-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    margin-top: 8px;
-}
-
-#home .social-links a {
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-
-/* =====================================================
-   RIGHT COLUMN — BIOGRAPHY
-   ===================================================== */
-
-#home .hero-text {
-    width: 100%;
-    min-width: 0;
-    max-width: none;
-
-    margin: 0;
-    padding: 0;
-
-    text-align: left;
-}
-
-
-/* WELCOME HEADING */
-
-#home .home-name {
-    font-size: 2.1rem;
-    line-height: 1.2;
-
-    text-align: left;
-
     margin: 0 0 18px 0;
 }
 
 
-/* FIRST BIO PARAGRAPH */
+/* NAME */
 
-#home .hero-summary {
-    font-size: 1rem;
-    line-height: 1.6;
+.profile-name {
+    margin: 0 0 7px 0;
 
-    margin-top: 0;
-    margin-bottom: 16px;
+    color: var(--heading);
+
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 
-/* SECOND BIO PARAGRAPH */
+/* PROFILE INFORMATION */
 
-#home .hero-text > p:not(.hero-summary) {
-    font-size: 1rem;
-    line-height: 1.6;
+.profile-details {
+    color: var(--muted);
 
-    margin-top: 0;
-    margin-bottom: 16px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.profile-details span {
+    display: block;
+}
+
+.profile-details a {
+    font-size: inherit;
 }
 
 
-/* =====================================================
-   BUTTONS
-   ===================================================== */
+/* SOCIAL ICONS */
 
-#home .hero-actions {
+.social-links {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 13px;
+}
+
+.social-links a {
+    color: var(--muted);
+
+    font-size: 1.18rem;
+}
+
+.social-links a:hover {
+    color: var(--link);
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   RIGHT PAGE CONTENT
+   ========================================================== */
+
+.page-content {
+    width: 100%;
+    max-width: 780px;
+
+    min-width: 0;
+}
+
+
+/* MAIN PAGE HEADING */
+
+.page-content > h1:first-child,
+.home-name {
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    color: var(--heading);
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+
+/* GENERAL HEADINGS */
+
+.page-content h2 {
+    margin-top: 36px;
+    margin-bottom: 10px;
+
+    color: var(--heading);
+
+    font-size: 1.45rem;
+    line-height: 1.3;
+}
+
+.page-content h3 {
+    margin-top: 25px;
+    margin-bottom: 6px;
+
+    color: var(--heading);
+
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+
+/* PARAGRAPHS */
+
+.page-content p {
+    margin-top: 0;
+    margin-bottom: 17px;
+
+    line-height: 1.67;
+}
+
+.hero-summary {
+    margin-top: 0;
+    margin-bottom: 17px;
+
+    line-height: 1.67;
+}
+
+
+/* SECTION DIVIDERS */
+
+.research-heading {
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* ==========================================================
+   HOMEPAGE BUTTONS
+   ========================================================== */
+
+.hero-actions {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 8px;
+    gap: 9px;
 
-    margin-top: 20px;
+    margin-top: 22px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    border: 1px solid var(--border);
+    border-radius: 3px;
+
+    background: var(--button-bg);
+    color: var(--text);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--button-hover);
+
+    text-decoration: none;
 }
 
 
-/* =====================================================
+/* ==========================================================
    RESEARCH INTERESTS
-   ===================================================== */
+   ========================================================== */
 
-#home .interests {
+.interests {
     display: flex;
     flex-wrap: wrap;
 
-    gap: 6px;
+    gap: 7px;
 
-    margin-top: 14px;
+    margin-top: 18px;
+}
+
+.interests span {
+    padding: 5px 9px;
+
+    border: 1px solid var(--border);
+    border-radius: 3px;
+
+    color: var(--muted);
+
+    font-size: 0.77rem;
 }
 
 
-/* =====================================================
-   MOBILE HOMEPAGE
-   ===================================================== */
+/* ==========================================================
+   RESEARCH PAGE
+   ========================================================== */
+
+.paper {
+    margin-bottom: 34px;
+}
+
+.paper h3 {
+    margin-bottom: 5px;
+}
+
+.paper p {
+    margin-bottom: 9px;
+}
+
+.publications-heading {
+    margin-top: 38px;
+}
+
+.first-publication {
+    margin-top: 0;
+}
+
+
+/* ==========================================================
+   TEACHING PAGE
+   ========================================================== */
+
+.teaching-section h3 {
+    margin-top: 28px;
+    margin-bottom: 8px;
+
+    color: var(--heading);
+
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+.institution-gap {
+    height: 22px;
+}
+
+
+/* ==========================================================
+   CONTACT
+   ========================================================== */
+
+.contact-social {
+    margin-top: 28px;
+}
+
+.contact-social-title {
+    margin-bottom: 12px;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   CV PAGE
+   ========================================================== */
+
+.cv-frame {
+    width: 100%;
+    height: 900px;
+
+    margin-top: 15px;
+
+    border: 1px solid var(--border);
+}
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 0.82rem;
+}
+
+.footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 65px;
+}
+
+
+/* ==========================================================
+   TABLET / MOBILE
+   ========================================================== */
 
 @media (max-width: 768px) {
 
-    #home .hero {
-        padding: 20px 0 30px;
+    .container {
+        width: calc(100% - 30px);
     }
 
-    #home .hero-grid {
-        display: flex;
+
+    /* NAVIGATION */
+
+    .nav-wrap {
+        min-height: auto;
+
+        padding: 13px 0;
+
         flex-direction: column;
 
-        width: 100%;
+        gap: 10px;
+    }
 
-        gap: 25px;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
 
-        align-items: center;
+        gap: 9px 18px;
     }
 
 
-    /* PROFILE FIRST */
+    /* PAGE */
 
-    #home .profile-card {
+    .page-layout {
+        display: block;
+
+        padding-top: 28px;
+        padding-bottom: 40px;
+    }
+
+
+    /* PROFILE */
+
+    .profile-sidebar {
         width: 100%;
-        max-width: 270px;
 
-        margin: 0 auto;
+        margin-bottom: 35px;
 
         text-align: center;
     }
 
-
-    #home .profile-name {
-        font-size: 1.7rem;
-
-        text-align: center;
-
-        margin-bottom: 16px;
-    }
-
-
-    /* KEEP SAME PICTURE SIZE ON MOBILE */
-
-    #home .profile-photo,
-    #home .profile-card img.profile-photo {
+    .profile-photo {
         width: 180px;
         height: 220px;
 
-        object-fit: cover;
-        object-position: center top;
-
-        border-radius: 0;
-
-        margin: 0 auto 14px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-
-    #home .profile-details {
-        align-items: center;
+    .profile-details {
         text-align: center;
     }
 
-
-    #home .social-links {
+    .social-links {
         justify-content: center;
     }
 
 
-    /* BIO SECOND */
+    /* CONTENT */
 
-    #home .hero-text {
-        width: 100%;
-
-        margin: 0;
-
-        text-align: left;
+    .page-content {
+        max-width: none;
     }
 
-
-    #home .home-name {
+    .page-content > h1:first-child,
+    .home-name {
         font-size: 1.8rem;
-
-        text-align: left;
-
-        margin-top: 0;
-        margin-bottom: 14px;
     }
 
 
-    #home .hero-summary,
-    #home .hero-text > p:not(.hero-summary) {
-        font-size: 0.94rem;
-        line-height: 1.55;
+    /* CV */
+
+    .cv-frame {
+        height: 650px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-wrap {
+        justify-content: center;
+
+        text-align: center;
     }
 }
 
 
-/* =====================================================
-   VERY SMALL MOBILE
-   ===================================================== */
+/* ==========================================================
+   SMALL PHONE
+   ========================================================== */
 
 @media (max-width: 420px) {
 
-    #home .profile-name {
-        font-size: 1.55rem;
+    body {
+        font-size: 15px;
     }
 
-    #home .home-name {
-        font-size: 1.7rem;
+    nav {
+        gap: 8px 13px;
     }
 
+    nav a,
+    .theme-toggle {
+        font-size: 0.85rem;
+    }
+
+    .page-content > h1:first-child,
+    .home-name {
+        font-size: 1.65rem;
+    }
+
+    .profile-name {
+        font-size: 1.2rem;
+    }
+
+    .cv-frame {
+        height: 520px;
+    }
 }
