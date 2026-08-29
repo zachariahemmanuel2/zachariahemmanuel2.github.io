@@ -1,47 +1,66 @@
-/* =========================================
+/* =====================================================
    HOMEPAGE ONLY
-   PROFILE LEFT / BIO RIGHT
-   ========================================= */
+   PROFILE LEFT + BIO RIGHT
+   ===================================================== */
+
+#home .hero {
+    padding: 35px 0 45px;
+}
 
 #home .hero-grid {
     display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
-    column-gap: 60px;
+    grid-template-columns: 270px minmax(0, 1fr);
+    column-gap: 65px;
     align-items: start;
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 
-/* =========================================
-   LEFT SIDE - PROFILE
-   ========================================= */
+/* =====================================================
+   LEFT COLUMN — PROFILE
+   ===================================================== */
 
 #home .profile-card {
-    order: 1;
-    width: 100%;
-    max-width: 300px;
+    width: 270px;
+    max-width: 270px;
     margin: 0;
-    justify-self: start;
+    padding: 0;
+
     text-align: center;
+    justify-self: start;
+
     overflow: visible;
 }
 
+
+/* NAME */
+
 #home .profile-name {
     display: block;
-    width: 100%;
-    margin: 0 0 18px 0;
 
-    font-size: 2.2rem;
+    width: 100%;
+
+    font-size: 1.75rem;
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.2;
 
     text-align: center;
+
+    margin: 0 0 16px 0;
+    padding: 0;
+
     white-space: normal;
 }
 
+
+/* =====================================================
+   PROFILE PICTURE
+   KEEP CURRENT SIZE AND RECTANGULAR FRAME
+   ===================================================== */
+
 #home .profile-photo,
-#home .profile-card img {
+#home .profile-card img.profile-photo {
     display: block;
 
     width: 180px;
@@ -52,83 +71,247 @@
 
     border-radius: 0;
 
-    margin: 0 auto 12px;
+    margin: 0 auto 14px;
 }
+
+
+/* =====================================================
+   PROFILE INFORMATION
+   ===================================================== */
 
 #home .profile-details {
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    width: 100%;
+
+    padding: 0;
+
     text-align: center;
+
+    gap: 3px;
 }
+
+#home .profile-details span {
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+#home .profile-details a {
+    font-size: 0.86rem;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+   ===================================================== */
 
 #home .social-links {
     display: flex;
+    align-items: center;
     justify-content: center;
+
     gap: 12px;
 
     margin-top: 8px;
 }
 
+#home .social-links a {
+    font-size: 1.2rem;
+    text-decoration: none;
+}
 
-/* =========================================
-   RIGHT SIDE - BIOGRAPHY
-   ========================================= */
+
+/* =====================================================
+   RIGHT COLUMN — BIOGRAPHY
+   ===================================================== */
 
 #home .hero-text {
-    order: 2;
     width: 100%;
     min-width: 0;
     max-width: none;
 
+    margin: 0;
+    padding: 0;
+
     text-align: left;
 }
+
+
+/* WELCOME HEADING */
 
 #home .home-name {
-    margin-top: 0;
+    font-size: 2.1rem;
+    line-height: 1.2;
+
     text-align: left;
+
+    margin: 0 0 18px 0;
 }
 
 
-/* =========================================
-   MOBILE HOMEPAGE ONLY
-   ========================================= */
+/* FIRST BIO PARAGRAPH */
+
+#home .hero-summary {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+
+/* SECOND BIO PARAGRAPH */
+
+#home .hero-text > p:not(.hero-summary) {
+    font-size: 1rem;
+    line-height: 1.6;
+
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+#home .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   RESEARCH INTERESTS
+   ===================================================== */
+
+#home .interests {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 14px;
+}
+
+
+/* =====================================================
+   MOBILE HOMEPAGE
+   ===================================================== */
 
 @media (max-width: 768px) {
+
+    #home .hero {
+        padding: 20px 0 30px;
+    }
 
     #home .hero-grid {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-
-    #home .profile-card {
-        order: 1;
 
         width: 100%;
-        max-width: 300px;
+
+        gap: 25px;
+
+        align-items: center;
+    }
+
+
+    /* PROFILE FIRST */
+
+    #home .profile-card {
+        width: 100%;
+        max-width: 270px;
 
         margin: 0 auto;
 
         text-align: center;
     }
 
-    #home .hero-text {
-        order: 2;
-
-        width: 100%;
-        max-width: none;
-
-        text-align: left;
-    }
-
-    #home .home-name {
-        text-align: left;
-    }
 
     #home .profile-name {
         font-size: 1.7rem;
+
+        text-align: center;
+
+        margin-bottom: 16px;
     }
+
+
+    /* KEEP SAME PICTURE SIZE ON MOBILE */
+
+    #home .profile-photo,
+    #home .profile-card img.profile-photo {
+        width: 180px;
+        height: 220px;
+
+        object-fit: cover;
+        object-position: center top;
+
+        border-radius: 0;
+
+        margin: 0 auto 14px;
+    }
+
+
+    #home .profile-details {
+        align-items: center;
+        text-align: center;
+    }
+
+
+    #home .social-links {
+        justify-content: center;
+    }
+
+
+    /* BIO SECOND */
+
+    #home .hero-text {
+        width: 100%;
+
+        margin: 0;
+
+        text-align: left;
+    }
+
+
+    #home .home-name {
+        font-size: 1.8rem;
+
+        text-align: left;
+
+        margin-top: 0;
+        margin-bottom: 14px;
+    }
+
+
+    #home .hero-summary,
+    #home .hero-text > p:not(.hero-summary) {
+        font-size: 0.94rem;
+        line-height: 1.55;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 420px) {
+
+    #home .profile-name {
+        font-size: 1.55rem;
+    }
+
+    #home .home-name {
+        font-size: 1.7rem;
+    }
+
 }
