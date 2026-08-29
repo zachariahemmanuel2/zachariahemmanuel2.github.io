@@ -3,223 +3,537 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Research by Zachariah Emmanuel, Ph.D. candidate in Economics at Georgia State University.">
+
     <title>Research | Zachariah Emmanuel</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 
 <body>
 
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
 <header class="site-header">
+
     <div class="container nav-wrap">
 
-        <nav>
-            <a class="site-name" href="index.html">Home</a>
-            <a href="cv.pdf" target="_blank">CV</a>
-            <a href="research.html">Research</a>
-            <a href="teaching.html">Teaching</a>
-            <a href="contact.html">Contact</a>
+        <a class="site-title" href="index.html">
+            Zachariah Emmanuel
+        </a>
+
+        <nav aria-label="Main navigation">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="research.html">
+                Research
+            </a>
+
+            <a href="teaching.html">
+                Teaching
+            </a>
+
+            <a href="cv.html">
+                CV
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                aria-label="Toggle light and dark theme"
+                title="Toggle theme">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
         </nav>
 
     </div>
+
 </header>
 
 
+
+<!-- =========================================
+     MAIN PAGE
+========================================= -->
+
 <main>
 
-<section class="section alt">
-
-    <div class="container">
-
-        <p class="section-label">Research</p>
-        <h2>Research</h2>
+    <div class="container page-layout">
 
 
-        <!-- JOB MARKET PAPER -->
+        <!-- =====================================
+             PROFILE SIDEBAR
+        ====================================== -->
 
-        <article class="paper featured">
+        <aside class="profile-sidebar">
 
-            <div class="paper-kicker">
-                <a href="" target="_blank">
-                    JOB MARKET PAPER
-                </a>
+            <img
+                src="assets/Zachariah-Profile-picture.jpg"
+                alt="Zachariah Emmanuel"
+                class="profile-photo"
+            >
+
+
+            <h2 class="profile-name">
+                Zachariah Emmanuel
+            </h2>
+
+
+            <div class="profile-details">
+
+                <span>
+                    Economics Ph.D. Candidate<br>
+                    Andrew Young School of Policy Studies<br>
+                    Georgia State University
+                </span>
+
+                <span>
+                    E-mail:
+
+                    <a href="mailto:zemmanuel2@gsu.edu">
+                        zemmanuel2@gsu.edu
+                    </a>
+                </span>
+
             </div>
 
-            <h3>
-                Exploring the Differential Impact of Repealing the ACA
-                Individual Mandate by Health Status
-            </h3>
 
-            <p>
-                This paper examines how repeal of the Affordable Care Act
-                individual mandate affected consumers differently by health status.
-                Using nationally representative CPS ASEC data and a two-way fixed
-                effects framework, I find that the repeal reduced insurance coverage,
-                with the decline concentrated among relatively healthy consumers.
-                Although lower coverage is associated with higher Marketplace
-                premiums, consumers' out-of-pocket premium payments declined.
-                The findings show how premium subsidies and other incentives can
-                affect the distribution of welfare losses.
-            </p>
+            <!-- SOCIAL LINKS -->
 
-        </article>
+            <div class="social-links">
 
+                <a href="https://scholar.google.com/citations?user=WSJ-WQcAAAAJ"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="Google Scholar"
+                   title="Google Scholar">
 
-        <!-- TOBACCO 21 PAPER -->
+                    <i class="fa-brands fa-google-scholar"></i>
 
-        <article class="paper">
-            <div class="paper-kicker">
-                <a href="papers/tobacco-paper.pdf" target="_blank">
-                    WORKING PAPER
                 </a>
+
+
+                <a href="https://www.linkedin.com/in/zachariah-emmanuel-82096583/"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="LinkedIn"
+                   title="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+
+                <a href="https://github.com/zachariahemmanuel2/"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="GitHub"
+                   title="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a href="https://orcid.org/0000-0001-9636-632X"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="ORCID"
+                   title="ORCID">
+
+                    <i class="fa-brands fa-orcid"></i>
+
+                </a>
+
+
+                <a href="https://www.researchgate.net/profile/Zachariah-Emmanuel"
+                   target="_blank"
+                   rel="noopener"
+                   aria-label="ResearchGate"
+                   title="ResearchGate">
+
+                    <i class="fa-brands fa-researchgate"></i>
+
+                </a>
+
             </div>
 
-            <h3>
-                Does the Tobacco 21 Minimum Legal Sales Age Policy Improve
-                Respiratory Health? Evidence from the United States
-            </h3>
-
-            <p class="paper-meta">
-                With M.O. Emmanuel, G. Aipoh, V.J. Dickson, and E.N. Collins
-            </p>
-
-            <p class="paper-meta">
-                Revise and Resubmit,
-                <em>Social Science &amp; Medicine</em>
-            </p>
-
-            <p>
-                In this paper, we examine whether Tobacco 21 minimum legal sales
-                age laws reduce smoking and improve respiratory health among
-                individuals aged 18–20. Using BRFSS data from 2011–2019 and
-                variation in policy adoption across states, we find that Tobacco 21
-                laws significantly reduce smoking but do not lead to a statistically
-                significant decline in asthma prevalence in the short run.
-                These findings suggest that reductions in smoking may not
-                immediately translate into measurable improvements in respiratory health.
-            </p>
-
-            
-
-        </article>
+        </aside>
 
 
-        <!-- OTHER RESEARCH -->
 
-        <article class="paper">
+        <!-- =====================================
+             RESEARCH CONTENT
+        ====================================== -->
 
-           <h3 class="wip-heading">WORKS IN PROGRESS</h3>
+        <section class="page-content research-page">
 
-            <p>
-                My on-going works examine the
-                spillover effects of health insurance on families, and maternal
-                health policies in the United States and Sub-Saharan Africa respectively.
-            </p>
 
-        </article>
+            <!-- =================================
+                 JOB MARKET PAPER
+            ================================== -->
 
- <!-- PRE-DOCTORAL PUBLICATIONS -->
+            <section class="research-section">
 
-<h2 class="research-heading publications-heading">
-PRE-DOCTORAL PUBLICATIONS
-</h2>
+                <h1 class="research-section-title">
+                    Job Market Paper
+                </h1>
 
-<article class="paper first-publication">
+                <hr class="research-divider">
 
-    <h3>
-        The Determinants of Micro, Small and Medium Enterprises'
-        (MSMEs) Performance in Nigeria: Evidence from Business Enterprise Survey
-    </h3>
 
-    <p class="paper-meta">
-        With Rosemary A. Anga and Charity G. Isa
-    </p>
+                <article class="paper">
 
-    <p>
-        <em>
-            Development Bank of Nigeria Journal of Economics
-            and Sustainable Growth
-        </em>,
-        3(1), 21–45, 2020.
-    </p>
+                    <h2 class="paper-title">
 
-    <div class="paper-links">
-        <a href="papers/msme-paper.pdf" target="_blank">
-            Published Article
-        </a>
+                        Exploring the Differential Impact of Repealing the ACA
+                        Individual Mandate by Health Status
+
+                    </h2>
+
+
+                    <p class="abstract-label">
+                        Abstract
+                    </p>
+
+
+                    <p>
+
+                        This paper examines how repeal of the Affordable Care Act
+                        individual mandate affected consumers differently by health status.
+                        Using nationally representative CPS ASEC data and a two-way fixed
+                        effects framework, I find that the repeal reduced insurance coverage,
+                        with the decline concentrated among relatively healthy consumers.
+                        Although lower coverage is associated with higher Marketplace
+                        premiums, consumers' out-of-pocket premium payments declined.
+                        The findings show how premium subsidies and other incentives can
+                        affect the distribution of welfare losses.
+
+                    </p>
+
+
+                    <div class="paper-links">
+
+                        <a href=""
+                           target="_blank"
+                           rel="noopener">
+
+                            Paper
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================
+                 WORKING PAPER
+            ================================== -->
+
+            <section class="research-section">
+
+                <h1 class="research-section-title">
+                    Working Papers
+                </h1>
+
+                <hr class="research-divider">
+
+
+                <article class="paper">
+
+                    <h2 class="paper-title">
+
+                        Does the Tobacco 21 Minimum Legal Sales Age Policy Improve
+                        Respiratory Health? Evidence from the United States
+
+                    </h2>
+
+
+                    <p class="paper-meta">
+                        With M.O. Emmanuel, G. Aipoh, V.J. Dickson, and E.N. Collins
+                    </p>
+
+
+                    <p class="paper-meta">
+
+                        Revise and Resubmit,
+                        <em>Social Science &amp; Medicine</em>
+
+                    </p>
+
+
+                    <p class="abstract-label">
+                        Abstract
+                    </p>
+
+
+                    <p>
+
+                        In this paper, we examine whether Tobacco 21 minimum legal sales
+                        age laws reduce smoking and improve respiratory health among
+                        individuals aged 18–20. Using BRFSS data from 2011–2019 and
+                        variation in policy adoption across states, we find that Tobacco 21
+                        laws significantly reduce smoking but do not lead to a statistically
+                        significant decline in asthma prevalence in the short run.
+                        These findings suggest that reductions in smoking may not
+                        immediately translate into measurable improvements in respiratory health.
+
+                    </p>
+
+
+                    <div class="paper-links">
+
+                        <a href="papers/tobacco-paper.pdf"
+                           target="_blank"
+                           rel="noopener">
+
+                            Paper
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================
+                 WORKS IN PROGRESS
+            ================================== -->
+
+            <section class="research-section">
+
+                <h1 class="research-section-title">
+                    Works in Progress
+                </h1>
+
+                <hr class="research-divider">
+
+
+                <article class="paper">
+
+                    <p>
+
+                        My on-going works examine the
+                        spillover effects of health insurance on families, and maternal
+                        health policies in the United States and Sub-Saharan Africa respectively.
+
+                    </p>
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PRE-DOCTORAL PUBLICATIONS
+            ================================== -->
+
+            <section class="research-section">
+
+                <h1 class="research-section-title">
+                    Pre-Doctoral Publications
+                </h1>
+
+                <hr class="research-divider">
+
+
+
+                <!-- PUBLICATION 1 -->
+
+                <article class="paper">
+
+                    <h2 class="paper-title">
+
+                        The Determinants of Micro, Small and Medium Enterprises'
+                        (MSMEs) Performance in Nigeria: Evidence from Business Enterprise Survey
+
+                    </h2>
+
+
+                    <p class="paper-meta">
+                        With Rosemary A. Anga and Charity G. Isa
+                    </p>
+
+
+                    <p>
+
+                        <em>
+                            Development Bank of Nigeria Journal of Economics
+                            and Sustainable Growth
+                        </em>,
+                        3(1), 21–45, 2020.
+
+                    </p>
+
+
+                    <div class="paper-links">
+
+                        <a href="papers/msme-paper.pdf"
+                           target="_blank"
+                           rel="noopener">
+
+                            Published Article
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PUBLICATION 2 -->
+
+                <article class="paper">
+
+                    <h2 class="paper-title">
+
+                        Public Debt Sustainability in Nigeria after the Exit from
+                        Paris Club: The Role of Structural Breaks
+
+                    </h2>
+
+
+                    <p class="paper-meta">
+                        With Adewumi Otonne and Jane O. Asogwa
+                    </p>
+
+
+                    <p>
+
+                        <em>
+                            Acta Universitatis Danubius (Economica) Journal
+                        </em>,
+                        15(7), 148–163, 2019.
+
+                    </p>
+
+
+                    <div class="paper-links">
+
+                        <a href="papers/public-debt-paper.pdf"
+                           target="_blank"
+                           rel="noopener">
+
+                            Published Article
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PUBLICATION 3 -->
+
+                <article class="paper">
+
+                    <h2 class="paper-title">
+
+                        Predicting Exchange Rate with Commodity Prices:
+                        New Evidence from Westerlund and Narayan (2015) Estimator
+                        with Structural Breaks and Asymmetries
+
+                    </h2>
+
+
+                    <p class="paper-meta">
+                        With Afees A. Salisu, Wasiu Adekunle, and Wasiu A. Alimi
+                    </p>
+
+
+                    <p>
+
+                        <em>
+                            Resources Policy
+                        </em>,
+                        62(1), 33–56, 2019.
+
+                    </p>
+
+
+                    <div class="paper-links">
+
+                        <a href="papers/exchange-rate-paper.pdf"
+                           target="_blank"
+                           rel="noopener">
+
+                            Published Article
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+        </section>
+
     </div>
-
-</article>
-
-        <!-- PUBLICATION 2 -->
-
-        <article class="paper">
-
-            <h3>
-                Public Debt Sustainability in Nigeria after the Exit from
-                Paris Club: The Role of Structural Breaks
-            </h3>
-
-            <p class="paper-meta">
-                With Adewumi Otonne and Jane O. Asogwa
-            </p>
-
-            <p>
-                <em>Acta Universitatis Danubius (Economica) Journal</em>,
-                15(7), 148–163, 2019.
-            </p>
-
-             <div class="paper-links">
-                <a href="papers/public-debt-paper.pdf" target="_blank">
-                    Published Article
-                     </a>
-            </div>
-
-        </article>
-
-
-        <!-- PUBLICATION 3 -->
-
-        <article class="paper">
-
-            <h3>
-                Predicting Exchange Rate with Commodity Prices:
-                New Evidence from Westerlund and Narayan (2015) Estimator
-                with Structural Breaks and Asymmetries
-            </h3>
-
-            <p class="paper-meta">
-                With Afees A. Salisu, Wasiu Adekunle, and Wasiu A. Alimi
-            </p>
-
-            <p>
-                <em>Resources Policy</em>,
-                62(1), 33–56, 2019.
-            </p>
- <div class="paper-links">
-                <a href="papers/exchange-rate-paper.pdf" target="_blank">
-                    Published Article
-                     </a>
-            </div>
-
-        </article>
-
- </div>
-
-</section>
 
 </main>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer>
 
     <div class="container footer-wrap">
 
-        <span>© 2026 Zachariah Emmanuel</span>
+        <span>
+            © 2026 Zachariah Emmanuel
+        </span>
 
     </div>
 
 </footer>
+
+
+
+<!-- =========================================
+     THEME TOGGLE
+========================================= -->
+
+<script src="theme.js"></script>
 
 
 </body>
