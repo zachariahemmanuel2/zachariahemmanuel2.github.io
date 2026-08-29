@@ -919,3 +919,72 @@ nav a {
     object-fit: cover !important;
     clip-path: none !important;
 }
+
+
+/* =====================================
+   HOME PAGE LAYOUT
+===================================== */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+
+/* LEFT SIDE: PROFILE */
+
+.profile-card {
+  text-align: center;
+}
+
+.profile-name {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.profile-details {
+  text-align: center;
+}
+
+
+/* RIGHT SIDE: BIO */
+
+.hero-text {
+  text-align: left;
+}
+
+.home-name {
+  margin-top: 0;
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .profile-card {
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+}
