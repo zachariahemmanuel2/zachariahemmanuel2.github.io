@@ -630,3 +630,26 @@ footer {
     }
 }
 
+.abstract-toggle {
+  margin: 0.5em 0;
+}
+
+.abstract-toggle summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: normal;
+  color: inherit;
+}
+
+.abstract-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.abstract-toggle summary:hover {
+  text-decoration: underline;
+}
+
+.abstract-text {
+  margin-top: 0.5em;
+  line-height: 1.6;
+}
