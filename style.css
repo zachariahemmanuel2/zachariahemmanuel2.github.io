@@ -631,24 +631,35 @@ footer {
 }
 
 .abstract-toggle {
-  margin: 0.5em 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
-.abstract-toggle summary:hover {
-  text-decoration: underline;
-}
-
-.abstract-text {
-  margin-top: 0.5em;
-  line-height: 1.6;
-}
 .abstract-toggle summary {
-    cursor: pointer;
-    font-weight: normal;
-    color: inherit;
+  cursor: pointer;
+  list-style: none;
+  font-weight: normal;
+  display: inline-block;
+}
+
+.abstract-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Triangle when collapsed */
+.abstract-toggle summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.75em;
+}
+
+/* Triangle when expanded */
+.abstract-toggle[open] summary::before {
+  content: "▼";
 }
 
 .abstract-text {
-    margin-top: 8px;
-    line-height: 1.6;
+  margin-top: 8px;
+  line-height: 1.6;
 }
