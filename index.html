@@ -15,36 +15,12 @@
   </title>
 
   <link rel="stylesheet" href="style.css">
-  
+
   <!-- Font Awesome for social icons -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
-
-
-  <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    menuToggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-        menuToggle.classList.toggle("active");
-
-        const isOpen = navLinks.classList.contains("active");
-        menuToggle.setAttribute("aria-expanded", isOpen);
-    });
-
-    /* Close menu after selecting a link */
-    navLinks.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            navLinks.classList.remove("active");
-            menuToggle.classList.remove("active");
-            menuToggle.setAttribute("aria-expanded", "false");
-        });
-    });
-</script>
-
 
 <body>
 
@@ -69,17 +45,24 @@
       aria-label="Open navigation menu"
       aria-expanded="false"
       aria-controls="main-nav">
+
       <span></span>
       <span></span>
       <span></span>
+
     </button>
 
     <!-- Main navigation -->
-    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+    <nav id="main-nav"
+         class="main-nav"
+         aria-label="Main navigation">
 
       <a href="index.html">Home</a>
+
       <a href="research.html">Research</a>
+
       <a href="teaching.html">Teaching</a>
+
       <a href="cv.html">CV</a>
 
       <button
@@ -88,7 +71,9 @@
         type="button"
         aria-label="Toggle light and dark theme"
         title="Toggle theme">
+
         <i class="fa-solid fa-moon"></i>
+
       </button>
 
     </nav>
@@ -96,6 +81,7 @@
   </div>
 
 </header>
+
 
 <!-- =====================================
      MAIN CONTENT
@@ -122,11 +108,12 @@
 
       <div class="profile-details">
 
-       <span>
-    Economics Ph.D. Candidate<br>
-    Andrew Young School of Policy Studies<br>
-    Georgia State University
-   
+        <span>
+          Economics Ph.D. Candidate<br>
+          Andrew Young School of Policy Studies<br>
+          Georgia State University
+        </span>
+
         <span>
           E-mail:
           <a href="mailto:zemmanuel2@gsu.edu">
@@ -295,7 +282,13 @@
 
 </footer>
 
+
+<!-- Theme toggle -->
 <script src="theme.js"></script>
+
+<!-- Mobile menu -->
+<script src="menu.js"></script>
+
 </body>
 
 </html>
