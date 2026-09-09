@@ -674,3 +674,81 @@ footer {
     line-height: 1.6;
     padding-left: 5px;
 }
+
+
+/* =====================================
+   TEACHING EVALUATION
+===================================== */
+
+.evaluation-details {
+    width: 100%;
+    margin-top: 12px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.evaluation-details summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.evaluation-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.evaluation-table th,
+.evaluation-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.evaluation-table th:last-child,
+.evaluation-table td:last-child {
+    text-align: center;
+    width: 100px;
+}
+
+.evaluation-note {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.evaluation-details h4 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+/* Keep all questions aligned */
+
+.evaluation-question {
+    margin: 0 0 24px 0;
+    padding: 0;
+}
+
+.evaluation-question-title {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+
+/* Keep every student comment aligned */
+
+.evaluation-question blockquote {
+    margin: 8px 0 8px 25px;
+    padding-left: 14px;
+    border-left: 3px solid #ccc;
+}
+
+
+/* Links below evaluation */
+
+.teaching-links {
+    margin-top: 20px;
+    margin-left: 0;
+}
