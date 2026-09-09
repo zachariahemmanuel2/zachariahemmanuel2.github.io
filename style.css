@@ -754,99 +754,145 @@ footer {
 }
 
 
-/* =====================================
-   MOBILE HAMBURGER MENU
-===================================== */
+/* =========================================
+   RESPONSIVE NAVIGATION
+========================================= */
 
-/* Hidden on desktop */
+/* Hamburger is NEVER visible on desktop */
 .menu-toggle {
     display: none;
 }
 
 
-/* Mobile */
-@media (max-width: 768px) {
+/* =========================================
+   MOBILE ONLY
+========================================= */
 
-    .site-nav {
+@media screen and (max-width: 768px) {
+
+    /*
+       Keep the title on the left and
+       hamburger on the far right.
+    */
+    .nav-wrap {
         position: relative;
     }
 
-    /* Three-line hamburger button */
+
+    /* Hamburger button */
     .menu-toggle {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 5px;
 
         position: absolute;
-        top: 0;
         right: 0;
+        top: 50%;
+        transform: translateY(-50%);
 
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
 
-        padding: 5px;
-        border: none;
+        margin: 0;
+        padding: 6px;
+
+        border: 0;
         background: transparent;
         cursor: pointer;
+
         z-index: 1001;
     }
 
+
+    /* Three stripes */
     .menu-toggle span {
         display: block;
-        width: 26px;
+        width: 25px;
         height: 2px;
-        background-color: #333;
-        transition: 0.25s ease;
+        margin: 0;
+        padding: 0;
+
+        background-color: currentColor;
+        border-radius: 2px;
+
+        transition: transform 0.25s ease,
+                    opacity 0.25s ease;
     }
 
 
-    /* Hide navigation links initially */
-    .nav-links {
-        display: none;
+    /*
+       Hide desktop navigation on mobile
+       until hamburger is clicked.
+    */
+    .main-nav {
+        display: none !important;
 
         position: absolute;
-        top: 45px;
+        top: calc(100% + 10px);
         right: 0;
 
-        min-width: 180px;
-        padding: 10px 0;
+        width: 190px;
+        margin: 0;
+        padding: 8px 0;
 
-        background-color: white;
-        border: 1px solid #ddd;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        background: var(--bg, #ffffff);
+        border: 1px solid rgba(128, 128, 128, 0.25);
+        border-radius: 6px;
+
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 
         z-index: 1000;
     }
 
 
-    /* Display links vertically */
-    .nav-links a {
+    /* This is what actually opens the menu */
+    .main-nav.menu-open {
+        display: block !important;
+    }
+
+
+    /* Navigation links */
+    .main-nav a {
         display: block;
-        padding: 10px 20px;
+        width: auto;
+
         margin: 0;
+        padding: 10px 18px;
+
         text-align: left;
         white-space: nowrap;
     }
 
 
-    /* Show menu after hamburger is clicked */
-    .nav-links.active {
+    /* Theme button inside mobile menu */
+    .main-nav .theme-toggle {
         display: block;
+        width: 100%;
+
+        margin: 0;
+        padding: 10px 18px;
+
+        text-align: left;
+
+        border: 0;
+        background: transparent;
+        cursor: pointer;
     }
 
 
-    /* Turn hamburger into X when open */
-    .menu-toggle.active span:nth-child(1) {
+    /* Turn hamburger into X when opened */
+
+    .menu-toggle.menu-open span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
 
-    .menu-toggle.active span:nth-child(2) {
+    .menu-toggle.menu-open span:nth-child(2) {
         opacity: 0;
     }
 
-    .menu-toggle.active span:nth-child(3) {
+    .menu-toggle.menu-open span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
-
 }
