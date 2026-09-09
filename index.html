@@ -53,27 +53,49 @@
      NAVIGATION
 ===================================== -->
 
-<nav class="site-nav">
+<header class="site-header">
 
-    <button class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="nav-links">
-        <span></span>
-        <span></span>
-        <span></span>
+  <div class="container nav-wrap">
+
+    <a class="site-title" href="index.html">
+      Zachariah Emmanuel
+    </a>
+
+    <!-- Mobile hamburger button -->
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="main-nav">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
-    <div class="nav-links" id="nav-links">
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="assets/Zachariah_Emmanuel_CV.pdf" target="_blank">CV</a>
-    </div>
+    <!-- Main navigation -->
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
 
-</nav>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
 
+      <button
+        class="theme-toggle"
+        id="theme-toggle"
+        type="button"
+        aria-label="Toggle light and dark theme"
+        title="Toggle theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+    </nav>
+
+  </div>
+
+</header>
 
 <!-- =====================================
      MAIN CONTENT
